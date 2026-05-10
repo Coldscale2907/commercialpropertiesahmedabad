@@ -54,12 +54,13 @@ export default function PropertyModal({ property, onClose, waNumber, phone }: Pr
         </button>
 
         {/* Hero Image */}
-        <div className="relative h-[280px] w-full">
+        <div className="relative h-[280px] w-full overflow-hidden rounded-t-2xl">
           <Image
             src={property.images[0]}
             alt={property.title}
-            fill
-            className="object-cover rounded-t-2xl"
+            width={800}
+            height={280}
+            className="w-full h-full object-cover"
             unoptimized
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-t-2xl" />

@@ -26,21 +26,16 @@ export default function Navigation({ waNumber, phone }: NavigationProps) {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <nav
-      className={`sticky top-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-charcoal/95 backdrop-blur-md shadow-lg' : 'bg-gradient-to-b from-black/60 to-transparent'
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between h-16 md:h-20">
+    <nav className="sticky top-0 z-50 bg-charcoal shadow-lg border-b border-white/10">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between h-16 md:h-18">
         {/* Logo */}
         <a href="#" className="flex flex-col leading-tight">
-          <span className="font-playfair font-bold text-white text-lg md:text-xl tracking-tight drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">
+          <span className="font-playfair font-bold text-white text-base md:text-lg tracking-tight">
             Commercial Properties
           </span>
-          <span className="text-gold text-xs font-semibold tracking-[0.15em] uppercase">
-            Ahmedabad
+          <span className="text-gold text-[10px] font-bold tracking-[0.2em] uppercase">
+            Ahmedabad &nbsp;·&nbsp; Slabs and Beams Realty
           </span>
-          <span className="text-gray-400 text-[10px] tracking-wide">Slabs and Beams Realty</span>
         </a>
 
         {/* Desktop Nav */}
@@ -49,7 +44,7 @@ export default function Navigation({ waNumber, phone }: NavigationProps) {
             <a
               key={link.label}
               href={link.href}
-              className="text-white/80 hover:text-gold text-sm font-medium transition-colors"
+              className="text-white/75 hover:text-gold text-sm font-medium transition-colors"
             >
               {link.label}
             </a>

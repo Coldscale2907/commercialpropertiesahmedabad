@@ -25,8 +25,9 @@ export default function AboutSection({ waNumber }: AboutSectionProps) {
           <Image
             src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=800&q=80"
             alt="Slabs and Beams Realty"
-            fill
-            className="object-cover"
+            width={800}
+            height={400}
+            className="w-full h-full object-cover"
             unoptimized
           />
           <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 to-transparent" />

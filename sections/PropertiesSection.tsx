@@ -88,12 +88,13 @@ export default function PropertiesSection({ waNumber, phone }: PropertiesSection
               onClick={() => setSelectedProperty(property)}
             >
               {/* Image */}
-              <div className="relative h-56 overflow-hidden">
+              <div className="relative h-56 overflow-hidden rounded-t-2xl">
                 <Image
                   src={property.images[0]}
                   alt={property.title}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  width={600}
+                  height={224}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   unoptimized
                 />
                 {/* Status Badge */}
