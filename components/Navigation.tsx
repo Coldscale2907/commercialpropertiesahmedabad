@@ -28,13 +28,13 @@ export default function Navigation({ waNumber, phone }: NavigationProps) {
   return (
     <nav
       className={`sticky top-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-charcoal/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+        scrolled ? 'bg-charcoal/95 backdrop-blur-md shadow-lg' : 'bg-gradient-to-b from-black/60 to-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
         <a href="#" className="flex flex-col leading-tight">
-          <span className="font-playfair font-bold text-white text-lg md:text-xl tracking-tight">
+          <span className="font-playfair font-bold text-white text-lg md:text-xl tracking-tight drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">
             Commercial Properties
           </span>
           <span className="text-gold text-xs font-semibold tracking-[0.15em] uppercase">

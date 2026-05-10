@@ -271,7 +271,7 @@ export const properties: Property[] = [
   },
   {
     id: '59-umiya-dham',
-    title: 'Project 59',
+    title: '59',
     builder: 'Sankalp',
     location: 'Umiya Dham Road',
     area: 'Umiya Dham Road, Ahmedabad',
@@ -316,7 +316,7 @@ export const properties: Property[] = [
   },
   {
     id: '53-umiya-dham',
-    title: 'Project 53',
+    title: '53',
     builder: 'Sankalp',
     location: 'Umiya Dham Road',
     area: 'Umiya Dham Road, Ahmedabad',
