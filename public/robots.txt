@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://commercialpropertiesahmedabad.in/sitemap.xml
