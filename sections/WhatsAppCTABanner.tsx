@@ -39,13 +39,13 @@ export default function WhatsAppCTABanner({ heading, subtext, darkBg, waNumber, 
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-green-600 transition-colors shadow-lg"
           >
-            <MessageCircle size={20} /> 💬 Chat on WhatsApp
+            <MessageCircle size={20} /> Chat on WhatsApp
           </a>
           <a
             href={`tel:+${phone}`}
             className="flex items-center justify-center gap-2 border-2 border-gold text-gold px-8 py-4 rounded-full text-lg font-semibold hover:bg-gold hover:text-white transition-colors"
           >
-            <Phone size={20} /> 📞 Call Now
+            <Phone size={20} /> Call Now
           </a>
         </div>
       </motion.div>

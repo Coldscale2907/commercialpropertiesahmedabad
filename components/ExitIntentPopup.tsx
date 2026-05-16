@@ -53,7 +53,7 @@ export default function ExitIntentPopup({ waNumber, phone }: ExitIntentPopupProp
                 onClick={() => { trackWhatsApp('exit_intent'); dismiss() }}
                 className="flex items-center justify-center gap-2 bg-[#25D366] text-white w-full py-3 rounded-lg font-semibold text-base mb-3 hover:bg-green-600 transition-colors"
               >
-                <MessageCircle size={20} /> 💬 Chat on WhatsApp
+                <MessageCircle size={20} /> Chat on WhatsApp
               </a>
 
               <a
@@ -61,7 +61,7 @@ export default function ExitIntentPopup({ waNumber, phone }: ExitIntentPopupProp
                 onClick={() => { trackCall('exit_intent'); dismiss() }}
                 className="flex items-center justify-center gap-2 border-2 border-gold text-gold w-full py-3 rounded-lg font-semibold text-base hover:bg-gold hover:text-charcoal transition-colors"
               >
-                <Phone size={20} /> 📞 Call Now
+                <Phone size={20} /> Call Now
               </a>
             </div>
           </motion.div>

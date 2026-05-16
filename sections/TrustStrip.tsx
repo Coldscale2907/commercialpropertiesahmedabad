@@ -1,12 +1,12 @@
 'use client'
 import { motion } from 'framer-motion'
-import { TrendingUp, MapPin, Building2, Award } from 'lucide-react'
+import { MapPin, TrendingUp, ShieldCheck, Headphones } from 'lucide-react'
 
 const stats = [
-  { icon: TrendingUp, number: '500+', label: 'Investor Inquiries' },
-  { icon: MapPin, number: '100+', label: 'Site Visits' },
-  { icon: Building2, number: '50+', label: 'Premium Listings' },
-  { icon: Award, number: '10+', label: 'Years Expertise' },
+  { icon: MapPin, label: 'Prime Commercial Locations' },
+  { icon: TrendingUp, label: 'High ROI Investment Opportunities' },
+  { icon: ShieldCheck, label: 'Verified Property Listings' },
+  { icon: Headphones, label: 'End-to-End Assistance' },
 ]
 
 export default function TrustStrip() {
@@ -22,9 +22,8 @@ export default function TrustStrip() {
             transition={{ delay: i * 0.1, duration: 0.5 }}
             className="flex flex-col items-center text-center border-b-2 border-gold pb-4"
           >
-            <stat.icon size={28} className="text-gold mb-2" />
-            <div className="font-playfair font-bold text-gold text-3xl md:text-4xl">{stat.number}</div>
-            <div className="text-white text-sm mt-1">{stat.label}</div>
+            <stat.icon size={28} className="text-gold mb-3" />
+            <div className="text-white text-sm font-semibold text-center leading-snug">{stat.label}</div>
           </motion.div>
         ))}
       </div>

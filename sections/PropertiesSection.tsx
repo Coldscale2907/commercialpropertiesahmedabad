@@ -54,7 +54,7 @@ export default function PropertiesSection({ waNumber, phone }: PropertiesSection
           </h2>
           <div className="w-16 h-0.5 bg-gold mx-auto mb-4" />
           <p className="text-gray-500 text-base max-w-2xl mx-auto">
-            10 carefully selected projects with high investment potential across prime Ahmedabad locations.
+            Carefully selected commercial projects with high investment potential across prime Ahmedabad locations.
           </p>
         </motion.div>
 
@@ -97,20 +97,10 @@ export default function PropertiesSection({ waNumber, phone }: PropertiesSection
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   unoptimized
                 />
-                {/* Status Badge */}
-                <span className={`absolute top-3 left-3 ${statusColors[property.status]} text-white text-xs px-2 py-1 rounded-full font-bold uppercase tracking-wide`}>
-                  {property.status}
-                </span>
-                {/* Builder Badge */}
+                {/* Builder Badge only */}
                 <span className="absolute top-3 right-3 bg-charcoal/80 text-white text-xs px-2 py-1 rounded-full">
                   {property.builder}
                 </span>
-                {/* Urgency Label */}
-                {property.urgencyLabel && (
-                  <div className="absolute bottom-0 left-0 right-0 bg-gold/90 text-white text-xs text-center py-1 font-semibold">
-                    {property.urgencyLabel}
-                  </div>
-                )}
               </div>
 
               {/* Card Body */}
@@ -120,17 +110,8 @@ export default function PropertiesSection({ waNumber, phone }: PropertiesSection
                   <MapPin size={13} className="text-gold" />
                   <span>{property.location}</span>
                 </div>
-                <div className="text-2xl font-bold text-gold font-playfair mb-1">{property.priceRange}</div>
-                <div className="text-sm text-gray-500 mb-3">{property.sqftRange}</div>
-
-                {/* Investment Tags */}
-                <div className="flex flex-wrap gap-1 mb-4">
-                  {property.investmentTags.slice(0, 3).map((tag) => (
-                    <span key={tag} className="border border-gold/60 text-gold text-xs px-2 py-0.5 rounded-full">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+                <div className="text-xl font-bold text-gold font-playfair mb-1">Price on Request</div>
+                <div className="text-sm text-gray-500 mb-4">{property.sqftRange}</div>
 
                 {/* CTAs */}
                 <div
@@ -157,7 +138,7 @@ export default function PropertiesSection({ waNumber, phone }: PropertiesSection
                     onClick={() => setSelectedProperty(property)}
                     className="col-span-2 flex items-center justify-center gap-1 border border-gold text-gold text-sm py-2 rounded-lg hover:bg-gold hover:text-white transition-colors"
                   >
-                    <FileText size={14} /> 📋 View Details
+                    <FileText size={14} /> View Details
                   </button>
                 </div>
               </div>

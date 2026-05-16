@@ -90,14 +90,14 @@ export default function HeroSection({ waNumber, phone }: HeroSectionProps) {
             onClick={() => trackWhatsApp('hero')}
             className="flex items-center justify-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg shadow-green-500/30 hover:bg-green-600 transition-all"
           >
-            <MessageCircle size={22} /> 💬 Get Price on WhatsApp
+            <MessageCircle size={22} /> Get Price on WhatsApp
           </a>
           <a
             href={`tel:+${phone}`}
             onClick={() => trackCall('hero')}
             className="flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/10 transition-all"
           >
-            <Phone size={20} /> 📞 Call Now
+            <Phone size={20} /> Call Now
           </a>
         </motion.div>
 
