@@ -49,13 +49,13 @@ export default function AboutSection({ waNumber }: AboutSectionProps) {
           {/* Gold Accent Box */}
           <div className="border-l-4 border-gold bg-beige pl-5 py-3 rounded-r-lg mb-6">
             <p className="text-dark-text text-base font-semibold italic">
-              &ldquo;Ahmedabad&apos;s most trusted name in commercial real estate advisory — connecting investors and businesses with premium properties since 2014.&rdquo;
+              &ldquo;Ahmedabad&apos;s most trusted name in commercial real estate advisory, connecting investors and businesses with premium properties since 2014.&rdquo;
             </p>
           </div>
 
           <div className="space-y-4 text-gray-600 text-base leading-relaxed mb-8">
             <p>
-              Slabs and Beams Realty is a specialized commercial real estate advisory firm based in Ahmedabad, Gujarat. We focus exclusively on commercial properties — office spaces, showrooms, and retail shops — across Ahmedabad&apos;s fastest-growing corridors.
+              Slabs and Beams Realty is a specialized commercial real estate advisory firm based in Ahmedabad, Gujarat. We focus exclusively on commercial properties: office spaces, showrooms, and retail shops, across Ahmedabad&apos;s fastest-growing corridors.
             </p>
             <p>
               Our team of experienced advisors provides unbiased, data-driven investment guidance to HNI investors, business owners, and retail investors looking to capitalize on Ahmedabad&apos;s booming commercial real estate market.

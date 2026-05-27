@@ -18,7 +18,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Commercial Properties Ahmedabad | Office Spaces, Retail Shops & Showrooms | Slabs and Beams Realty',
   description:
-    'Discover premium commercial properties in Ahmedabad — office spaces, retail shops, and showrooms across Vaishnodevi, Iskon-Ambli, Hebatpur & more. Expert advisory by Slabs and Beams Realty. High ROI, verified listings, 10+ prime locations.',
+    'Discover premium commercial properties in Ahmedabad: office spaces, retail shops, and showrooms across Vaishnodevi, Iskon-Ambli, Hebatpur & more. Expert advisory by Slabs and Beams Realty. High ROI, verified listings.',
   keywords:
     'commercial properties Ahmedabad, office space Ahmedabad, retail shop Ahmedabad, showroom Ahmedabad, commercial real estate Ahmedabad, SG Highway office, Vaishnodevi commercial, Iskon-Ambli showroom, Hebatpur office, Slabs and Beams Realty',
   authors: [{ name: 'Slabs and Beams Realty' }],

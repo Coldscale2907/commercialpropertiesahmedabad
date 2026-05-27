@@ -74,7 +74,7 @@ export default function CallbackForm({ waNumber, phone }: CallbackFormProps) {
               '✓ Free consultation with our expert advisors',
               '✓ Latest pricing & floor plans shared instantly',
               '✓ Site visit arranged within 24 hours',
-              '✓ Zero brokerage — direct builder pricing',
+              '✓ Zero brokerage, direct builder pricing',
             ].map((point) => (
               <div key={point} className="text-gray-300 text-sm">{point}</div>
             ))}

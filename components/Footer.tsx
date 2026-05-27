@@ -1,4 +1,4 @@
-import { MessageCircle, Phone, Mail, MapPin, Instagram, Linkedin, Facebook, Twitter } from 'lucide-react'
+import { MessageCircle, Phone, Mail, MapPin, Instagram, Linkedin, Facebook } from 'lucide-react'
 import { getWhatsAppURL } from '@/lib/utils'
 
 const WA_MESSAGE = "Hi, I'm interested in commercial properties in Ahmedabad. Please share pricing and details."
@@ -19,7 +19,7 @@ export default function Footer({ waNumber, phone }: FooterProps) {
           </div>
           <div className="text-gray-400 text-sm">Powered by Slabs and Beams Realty</div>
           <p className="text-gray-400 text-sm mt-3 max-w-md lg:max-w-xs">
-            Ahmedabad&apos;s premier commercial real estate advisory — connecting investors and businesses with prime commercial spaces.
+            Ahmedabad&apos;s premier commercial real estate advisory, connecting investors and businesses with prime commercial spaces.
           </p>
         </div>
 
@@ -62,8 +62,6 @@ export default function Footer({ waNumber, phone }: FooterProps) {
                 'Showrooms',
                 'Retail Shops',
                 'Commercial Hubs',
-                'Pre-Launch Projects',
-                'Ready to Move',
               ].map((type) => (
                 <li key={type}>
                   <a href="#properties" className="text-gray-400 hover:text-gold text-sm transition-colors">
@@ -86,8 +84,8 @@ export default function Footer({ waNumber, phone }: FooterProps) {
               </li>
               <li className="flex items-center gap-2 text-sm text-gray-400">
                 <Mail size={14} className="text-gold shrink-0" />
-                <a href="mailto:info@commercialpropertiesahmedabad.in" className="hover:text-gold transition-colors break-all">
-                  info@commercialproperties<br />ahmedabad.in
+                <a href="mailto:info@slabsandbeams.com" className="hover:text-gold transition-colors break-all">
+                  info@slabsandbeams.com
                 </a>
               </li>
               <li className="flex items-start gap-2 text-sm text-gray-400">
@@ -108,29 +106,46 @@ export default function Footer({ waNumber, phone }: FooterProps) {
 
         {/* Social Icons */}
         <div className="flex justify-center gap-4 mb-8">
-          {[
-            { icon: Instagram, label: 'Instagram' },
-            { icon: Linkedin, label: 'LinkedIn' },
-            { icon: Facebook, label: 'Facebook' },
-            { icon: Twitter, label: 'Twitter' },
-          ].map(({ icon: Icon, label }) => (
-            <a
-              key={label}
-              href="#"
-              aria-label={label}
-              className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-gray-400 hover:text-gold hover:border-gold transition-colors"
-            >
-              <Icon size={18} />
-            </a>
-          ))}
+          <a
+            href="https://www.facebook.com/profile.php?id=61558677813758"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-gray-400 hover:text-gold hover:border-gold transition-colors"
+          >
+            <Facebook size={18} />
+          </a>
+          <a
+            href="https://www.instagram.com/slabsandbeams.realty"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-gray-400 hover:text-gold hover:border-gold transition-colors"
+          >
+            <Instagram size={18} />
+          </a>
+          <a
+            href="https://www.linkedin.com/company/slabs-and-beams-realty/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-gray-400 hover:text-gold hover:border-gold transition-colors"
+          >
+            <Linkedin size={18} />
+          </a>
         </div>
 
         {/* Gold Separator */}
         <div className="h-px bg-gold/30 mb-6" />
 
+        {/* Disclaimer */}
+        <p className="text-gray-500 text-xs leading-relaxed text-center mb-6 max-w-4xl mx-auto">
+          <strong className="text-gray-400">Disclaimer:</strong> Slabs and Beams Realty is not marketing these real estate projects (&ldquo;Projects&rdquo;) and is not acting on behalf of the developer of these projects. The projects have been displayed for information purposes only. The information and data published herein with respect to the project are collected from publicly available sources.
+        </p>
+
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-sm text-gray-500">
-          <span>© 2025 Commercial Properties Ahmedabad. All rights reserved.</span>
+          <span>&#169; 2026 Slabs and Beams Realty. All rights reserved.</span>
           <div className="flex gap-4">
             <a href="#" className="hover:text-gold transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-gold transition-colors">Terms of Service</a>

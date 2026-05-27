@@ -5,9 +5,9 @@ import { CheckCircle2 } from 'lucide-react'
 const bullets = [
   'Fastest growing Tier-1 commercial market in India',
   'GIFT City driving massive commercial and office demand',
-  'SG Highway — India\'s premium commercial corridor',
+  'SG Highway: India\'s premium commercial corridor',
   'Metro connectivity boosting commercial property values',
-  'Strong rental yields — 6–9% annually on commercial spaces',
+  'Strong rental yields of 6-9% annually on commercial spaces',
   'Rising HNI, institutional and NRI investment',
 ]
 
@@ -45,7 +45,7 @@ export default function InvestmentHighlights() {
             href="#properties"
             className="inline-flex items-center gap-2 bg-gold text-white px-6 py-3 rounded-lg font-semibold hover:bg-gold/90 transition-colors"
           >
-            Explore All 10 Properties →
+            Explore All Properties →
           </a>
         </motion.div>
 
