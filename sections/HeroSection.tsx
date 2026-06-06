@@ -68,7 +68,7 @@ export default function HeroSection() {
             variants={itemVariants}
             className="text-gold text-lg md:text-xl font-semibold mb-4"
           >
-            High-Growth Commercial Spaces for Investors, Businesses &amp; Brands.
+            High-Growth Commercial Spaces for Investors, Businesses &amp; Brands
           </motion.p>
 
           {/* Body */}
