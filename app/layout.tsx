@@ -16,29 +16,32 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Commercial Properties Ahmedabad | Office Spaces, Retail Shops & Showrooms | Slabs and Beams Realty',
+  title: 'Commercial Properties Ahmedabad | Slabs and Beams Realty',
   description:
-    'Discover premium commercial properties in Ahmedabad: office spaces, retail shops, and showrooms across Vaishnodevi, Iskon-Ambli, Hebatpur & more. Expert advisory by Slabs and Beams Realty. High ROI, verified listings.',
+    'Discover premium commercial properties in Ahmedabad. Office spaces, showrooms & retail shops across Vaishnodevi, SG Highway, Iskon-Ambli. Expert advisory by Slabs and Beams Realty. High ROI, verified listings.',
   keywords:
     'commercial properties Ahmedabad, office space Ahmedabad, retail shop Ahmedabad, showroom Ahmedabad, commercial real estate Ahmedabad, SG Highway office, Vaishnodevi commercial, Iskon-Ambli showroom, Hebatpur office, Slabs and Beams Realty',
   authors: [{ name: 'Slabs and Beams Realty' }],
   creator: 'Slabs and Beams Realty',
   publisher: 'Slabs and Beams Realty',
   robots: { index: true, follow: true },
+  alternates: {
+    canonical: 'https://commercialpropertiesahmedabad.in/',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_IN',
     url: 'https://commercialpropertiesahmedabad.in',
     siteName: 'Commercial Properties Ahmedabad',
-    title: 'Commercial Properties Ahmedabad | Premium Office & Showroom Spaces',
+    title: 'Commercial Properties Ahmedabad | Slabs and Beams Realty',
     description:
-      'Discover premium commercial properties in Ahmedabad. Office spaces, showrooms & retail shops with high ROI potential. Expert advisory by Slabs and Beams Realty.',
+      'Premium commercial properties in Ahmedabad. Office spaces, showrooms & retail shops with high ROI potential. Expert advisory by Slabs and Beams Realty.',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80',
+        url: 'https://commercialpropertiesahmedabad.in/properties/twin-towers.jpg',
         width: 1200,
         height: 630,
-        alt: 'Commercial Properties Ahmedabad',
+        alt: 'Trogon Twin Towers - Premium Commercial Property Ahmedabad',
       },
     ],
   },
@@ -46,15 +49,15 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Commercial Properties Ahmedabad | Slabs and Beams Realty',
     description:
-      'Premium commercial properties in Ahmedabad — offices, showrooms, retail. High ROI, verified listings.',
-    images: ['https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80'],
+      'Premium commercial properties in Ahmedabad: offices, showrooms, retail. High ROI, verified listings.',
+    images: ['https://commercialpropertiesahmedabad.in/properties/twin-towers.jpg'],
   },
 }
 
 const jsonLdLocalBusiness = {
   '@context': 'https://schema.org',
   '@type': 'RealEstateAgent',
-  name: 'Slabs and Beams Realty — Commercial Properties Ahmedabad',
+  name: 'Slabs and Beams Realty, Commercial Properties Ahmedabad',
   description:
     'Expert commercial real estate advisory for office spaces, showrooms, and retail shops in Ahmedabad.',
   url: 'https://commercialpropertiesahmedabad.in',
@@ -95,7 +98,7 @@ const jsonLdFAQ = {
       name: 'What is the rental yield on commercial properties in Ahmedabad?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Commercial properties in Ahmedabad typically offer 6–9% annual rental yields, significantly higher than residential properties. Prime corridors like Vaishnodevi and SG Highway see the strongest yields.',
+        text: 'Commercial properties in Ahmedabad typically offer 6-9% annual rental yields, significantly higher than residential properties. Prime corridors like Vaishnodevi and SG Highway see the strongest yields.',
       },
     },
     {
@@ -128,6 +131,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdLocalBusiness) }}

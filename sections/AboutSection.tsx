@@ -23,8 +23,8 @@ export default function AboutSection({ waNumber }: AboutSectionProps) {
           className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl"
         >
           <Image
-            src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=800&q=80"
-            alt="Slabs and Beams Realty"
+            src="/properties/tremont.jpg"
+            alt="Slabs and Beams Realty - Commercial Properties Ahmedabad"
             width={800}
             height={400}
             className="w-full h-full object-cover"

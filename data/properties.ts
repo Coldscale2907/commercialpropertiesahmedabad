@@ -20,8 +20,7 @@ export const properties: Property[] = [
     paymentTerms: '60-40',
     bookingPercent: 10,
     images: [
-      'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80',
-      'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80',
+      '/properties/twin-towers.jpg',
     ],
     highlights: [
       '32-floor iconic twin tower structure',
@@ -65,8 +64,7 @@ export const properties: Property[] = [
     paymentTerms: '70-30',
     bookingPercent: 10,
     images: [
-      'https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&q=80',
-      'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80',
+      '/properties/wave.jpg',
     ],
     highlights: [
       '29-floor premium commercial tower',
@@ -110,8 +108,7 @@ export const properties: Property[] = [
     paymentTerms: '70-30',
     bookingPercent: 10,
     images: [
-      'https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=800&q=80',
-      'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80',
+      '/properties/brillia.jpg',
     ],
     highlights: [
       '32-floor premium showroom & office complex',
@@ -155,8 +152,7 @@ export const properties: Property[] = [
     paymentTerms: 'TBD',
     bookingPercent: 10,
     images: [
-      'https://images.unsplash.com/photo-1554435493-93422e8d1c46?w=800&q=80',
-      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80',
+      '/properties/tremont.jpg',
     ],
     highlights: [
       '32-floor landmark commercial tower',
@@ -199,8 +195,7 @@ export const properties: Property[] = [
     paymentTerms: '60-40',
     bookingPercent: 10,
     images: [
-      'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80',
-      'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80',
+      '/properties/marvel.jpg',
     ],
     highlights: [
       '35-floor ultra-premium office tower',
@@ -243,8 +238,7 @@ export const properties: Property[] = [
     paymentTerms: '60-40',
     bookingPercent: 10,
     images: [
-      'https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&q=80',
-      'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80',
+      '/properties/centroid.jpg',
     ],
     highlights: [
       'Highest BSP at ₹8,900/sq.ft — ultra premium',

@@ -32,20 +32,30 @@ export default function CallbackForm({ waNumber, phone }: CallbackFormProps) {
 
   const onSubmit = async (data: FormData) => {
     try {
-      const formData = new FormData()
-      formData.append('form-name', 'callback-lead')
-      formData.append('name', data.name)
-      formData.append('phone', data.phone)
-      formData.append('interest', data.interest)
+      const payload = {
+        access_key: '032af630-8802-48d4-9ee6-476a774f5304',
+        subject: `New Lead: ${data.name} — Commercial Property Ahmedabad`,
+        from_name: 'Commercial Properties Ahmedabad',
+        to: 'info@slabsandbeams.com,contact@coldscale.in',
+        name: data.name,
+        phone: data.phone,
+        interest: data.interest,
+        botcheck: '',
+      }
 
-      await fetch('/', {
+      const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData as unknown as Record<string, string>).toString(),
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(payload),
       })
 
-      trackFormSubmit()
-      setSubmitted(true)
+      const result = await res.json()
+      if (result.success) {
+        trackFormSubmit()
+        setSubmitted(true)
+      } else {
+        throw new Error(result.message)
+      }
     } catch {
       trackFormSubmit()
       setSubmitted(true)
@@ -67,7 +77,7 @@ export default function CallbackForm({ waNumber, phone }: CallbackFormProps) {
             Get Instant Property Details
           </h2>
           <p className="text-gold text-base mb-6 font-semibold">
-            Our advisor calls you within 10 minutes.
+            Our advisor calls you back shortly.
           </p>
           <div className="space-y-3 mb-8">
             {[
@@ -95,19 +105,14 @@ export default function CallbackForm({ waNumber, phone }: CallbackFormProps) {
                 <CheckCircle2 size={32} className="text-green-600" />
               </div>
               <h3 className="font-playfair text-dark-text text-xl font-bold mb-2">Request Received!</h3>
-              <p className="text-green-600 font-semibold text-base">Our advisor will call you shortly!</p>
-              <p className="text-gray-500 text-sm mt-2">Usually within 10 minutes during business hours.</p>
+              <p className="text-gray-500 text-sm mt-2">Our advisor will be in touch soon.</p>
             </div>
           ) : (
             <form
-              name="callback-lead"
-              method="POST"
-              data-netlify="true"
               onSubmit={handleSubmit(onSubmit)}
               className="space-y-5"
             >
-              <input type="hidden" name="bot-field" />
-              <input type="hidden" name="form-name" value="callback-lead" />
+              <input type="hidden" name="botcheck" />
 
               <div>
                 <label className="block text-sm font-semibold text-dark-text mb-1">Your Name</label>

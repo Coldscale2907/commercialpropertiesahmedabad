@@ -16,11 +16,11 @@ export default function HeroSection({ waNumber, phone }: HeroSectionProps) {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
       <Image
-        src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80"
-        alt="Commercial Properties Ahmedabad"
+        src="/properties/hero-bg.jpg"
+        alt="Premium Commercial Properties Ahmedabad"
         fill
         priority
-        className="object-cover"
+        className="object-cover object-center"
         unoptimized
       />
       {/* Overlay */}
@@ -106,16 +106,8 @@ export default function HeroSection({ waNumber, phone }: HeroSectionProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.75, duration: 0.6 }}
-          className="flex flex-wrap justify-center gap-3 mt-8"
+          className="hidden"
         >
-          {['✓ Verified Projects', '✓ Prime Locations', '✓ High ROI Potential', '✓ Expert Guidance'].map((chip) => (
-            <span
-              key={chip}
-              className="bg-white/10 backdrop-blur text-white text-sm px-4 py-2 rounded-full border border-white/20"
-            >
-              {chip}
-            </span>
-          ))}
         </motion.div>
       </div>
 
