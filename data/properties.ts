@@ -64,7 +64,7 @@ export const properties: Property[] = [
     paymentTerms: '70-30',
     bookingPercent: 10,
     images: [
-      '/properties/wave.jpg',
+      '/properties/shivalik Wave.png',
     ],
     highlights: [
       '29-floor premium commercial tower',
@@ -108,7 +108,7 @@ export const properties: Property[] = [
     paymentTerms: '70-30',
     bookingPercent: 10,
     images: [
-      '/properties/brillia.jpg',
+      '/properties/Brillia.png',
     ],
     highlights: [
       '32-floor premium showroom & office complex',
