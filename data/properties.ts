@@ -152,7 +152,7 @@ export const properties: Property[] = [
     paymentTerms: 'TBD',
     bookingPercent: 10,
     images: [
-      '/properties/tremont.jpg',
+      '/properties/Tremont Tower.png',
     ],
     highlights: [
       '32-floor landmark commercial tower',
@@ -195,7 +195,7 @@ export const properties: Property[] = [
     paymentTerms: '60-40',
     bookingPercent: 10,
     images: [
-      '/properties/marvel.jpg',
+      '/properties/TIMES MARVEL.png',
     ],
     highlights: [
       '35-floor ultra-premium office tower',
@@ -238,7 +238,7 @@ export const properties: Property[] = [
     paymentTerms: '60-40',
     bookingPercent: 10,
     images: [
-      '/properties/centroid.jpg',
+      '/properties/Sanghavi Centroid.png',
     ],
     highlights: [
       'Highest BSP at ₹8,900/sq.ft — ultra premium',
