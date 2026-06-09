@@ -14,8 +14,8 @@ const bullets = [
 const stats = [
   { value: '6–9%', label: 'Annual Rental Yield' },
   { value: '15–25%', label: 'Capital Appreciation' },
-  { value: '₹500Cr+', label: 'Annual Commercial Transactions' },
   { value: '10+', label: 'Premium Ahmedabad Zones' },
+  { value: '100+', label: 'Happy Investors' },
 ]
 
 export default function InvestmentHighlights() {

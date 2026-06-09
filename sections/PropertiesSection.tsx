@@ -1,24 +1,9 @@
 'use client'
-import { useState } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { MapPin, MessageCircle, Phone, FileText } from 'lucide-react'
+import { MapPin, MessageCircle, Phone, Download } from 'lucide-react'
 import { properties } from '@/data/properties'
-import { Property } from '@/types'
-import PropertyModal from '@/components/PropertyModal'
 import { getWhatsAppURL, trackWhatsApp, trackCall } from '@/lib/utils'
-
-type FilterTab = 'All' | 'Office Space' | 'Showroom & Office' | 'Ready to Move' | 'Pre-Launch'
-
-const filterTabs: FilterTab[] = ['All', 'Office Space', 'Showroom & Office', 'Ready to Move', 'Pre-Launch']
-
-const statusColors: Record<Property['status'], string> = {
-  'Ready to Move': 'bg-red-500',
-  'Selling Fast': 'bg-amber-500',
-  'Limited Units': 'bg-orange-500',
-  Available: 'bg-green-600',
-  'Pre-Launch': 'bg-blue-600',
-}
 
 const WA_MESSAGE = "Hi, I'm interested in commercial properties in Ahmedabad. Please share pricing and details."
 
@@ -28,16 +13,6 @@ interface PropertiesSectionProps {
 }
 
 export default function PropertiesSection({ waNumber, phone }: PropertiesSectionProps) {
-  const [activeFilter, setActiveFilter] = useState<FilterTab>('All')
-  const [selectedProperty, setSelectedProperty] = useState<Property | null>(null)
-
-  const filtered = properties.filter((p) => {
-    if (activeFilter === 'All') return true
-    if (activeFilter === 'Ready to Move') return p.status === 'Ready to Move'
-    if (activeFilter === 'Pre-Launch') return p.status === 'Pre-Launch'
-    return p.category === activeFilter
-  })
-
   return (
     <section id="properties" className="py-20 px-4 md:px-8 lg:px-16 bg-soft-white">
       <div className="max-w-7xl mx-auto">
@@ -58,34 +33,16 @@ export default function PropertiesSection({ waNumber, phone }: PropertiesSection
           </p>
         </motion.div>
 
-        {/* Filter Tabs */}
-        <div className="flex flex-wrap justify-center gap-2 mb-10">
-          {filterTabs.map((tab) => (
-            <button
-              key={tab}
-              onClick={() => setActiveFilter(tab)}
-              className={`px-5 py-2 rounded-full text-sm font-semibold transition-all ${
-                activeFilter === tab
-                  ? 'bg-gold text-white shadow-md'
-                  : 'border border-gold text-gold hover:bg-gold/10'
-              }`}
-            >
-              {tab}
-            </button>
-          ))}
-        </div>
-
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filtered.map((property, i) => (
+          {properties.map((property, i) => (
             <motion.div
               key={property.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
-              className="group relative overflow-hidden rounded-2xl bg-white shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer"
-              onClick={() => setSelectedProperty(property)}
+              className="group relative overflow-hidden rounded-2xl bg-white shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             >
               {/* Image */}
               <div className="relative h-56 overflow-hidden rounded-t-2xl">
@@ -97,7 +54,7 @@ export default function PropertiesSection({ waNumber, phone }: PropertiesSection
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   unoptimized
                 />
-                {/* Builder Badge only */}
+                {/* Builder Badge */}
                 <span className="absolute top-3 right-3 bg-charcoal/80 text-white text-xs px-2 py-1 rounded-full">
                   {property.builder}
                 </span>
@@ -111,13 +68,13 @@ export default function PropertiesSection({ waNumber, phone }: PropertiesSection
                   <span>{property.location}</span>
                 </div>
                 <div className="text-xl font-bold text-gold font-playfair mb-1">Price on Request</div>
-                <div className="text-sm text-gray-500 mb-4">{property.sqftRange}</div>
+                <div className="text-sm text-gray-500 mb-1">{property.sqftRange}</div>
+                <div className="text-sm text-gray-500 mb-4">
+                  <span className="font-medium text-dark-text">Possession:</span> {property.possession}
+                </div>
 
                 {/* CTAs */}
-                <div
-                  className="grid grid-cols-2 gap-2"
-                  onClick={(e) => e.stopPropagation()}
-                >
+                <div className="grid grid-cols-2 gap-2">
                   <a
                     href={getWhatsAppURL(waNumber, `Hi, I'm interested in ${property.title} at ${property.location}. Please share pricing.`)}
                     target="_blank"
@@ -134,12 +91,15 @@ export default function PropertiesSection({ waNumber, phone }: PropertiesSection
                   >
                     <Phone size={14} /> Call Now
                   </a>
-                  <button
-                    onClick={() => setSelectedProperty(property)}
+                  <a
+                    href={getWhatsAppURL(waNumber, `Hi, I'd like to download the brochure for ${property.title} at ${property.location}. Please share it.`)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => trackWhatsApp(`brochure_${property.id}`)}
                     className="col-span-2 flex items-center justify-center gap-1 border border-gold text-gold text-sm py-2 rounded-lg hover:bg-gold hover:text-white transition-colors"
                   >
-                    <FileText size={14} /> View Details
-                  </button>
+                    <Download size={14} /> Download Brochure
+                  </a>
                 </div>
               </div>
             </motion.div>
@@ -164,14 +124,6 @@ export default function PropertiesSection({ waNumber, phone }: PropertiesSection
           </a>
         </motion.div>
       </div>
-
-      {/* Modal */}
-      <PropertyModal
-        property={selectedProperty}
-        onClose={() => setSelectedProperty(null)}
-        waNumber={waNumber}
-        phone={phone}
-      />
     </section>
   )
 }
