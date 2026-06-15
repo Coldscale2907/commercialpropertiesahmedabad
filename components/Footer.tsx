@@ -53,19 +53,21 @@ export default function Footer({ waNumber, phone }: FooterProps) {
             </ul>
           </div>
 
-          {/* Property Types */}
+          {/* Properties by Location */}
           <div>
-            <h4 className="font-playfair font-semibold text-white mb-4 text-base">Property Types</h4>
+            <h4 className="font-playfair font-semibold text-white mb-4 text-base">Properties by Location</h4>
             <ul className="space-y-2">
               {[
-                'Office Spaces',
-                'Showrooms',
-                'Retail Shops',
-                'Commercial Hubs',
-              ].map((type) => (
-                <li key={type}>
+                'Vaishnodevi Circle',
+                'GIFT City',
+                'Gota',
+                'Hebatpur',
+                'Iskon-Ambli',
+                'Pakwan Circle',
+              ].map((loc) => (
+                <li key={loc}>
                   <a href="#properties" className="text-gray-400 hover:text-gold text-sm transition-colors">
-                    {type}
+                    {loc}
                   </a>
                 </li>
               ))}

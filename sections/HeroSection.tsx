@@ -76,6 +76,18 @@ export default function HeroSection({ waNumber, phone }: HeroSectionProps) {
           Discover premium commercial projects across Gift City, Vaishnodevi Circle, SG Highway, Iskon-Ambli Road, &amp; more, with expert guidance from Slabs and Beams Realty.
         </motion.p>
 
+        {/* Zero Brokerage Badge */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.55, duration: 0.6 }}
+          className="mt-5 flex justify-center"
+        >
+          <span className="inline-flex items-center gap-2 bg-gold text-charcoal font-bold text-sm md:text-base px-6 py-2.5 rounded-full shadow-lg shadow-gold/30 tracking-wide uppercase">
+            ✦ Zero Brokerage Deals
+          </span>
+        </motion.div>
+
         {/* CTA Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

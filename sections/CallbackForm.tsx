@@ -7,10 +7,26 @@ import { motion } from 'framer-motion'
 import { CheckCircle2, Loader2, MessageCircle, Phone } from 'lucide-react'
 import { getWhatsAppURL, trackFormSubmit, trackWhatsApp, trackCall } from '@/lib/utils'
 
+const projectOptions = [
+  'Twin Towers',
+  'Wave',
+  'Brillia',
+  'Divyam',
+  'Keshar',
+  'Tremont Tower',
+  'Marvel',
+  'Centroid',
+  'Next',
+  'Centrica',
+  'Regalia 2',
+  'The Identity',
+  'Curv',
+]
+
 const schema = z.object({
   name: z.string().min(2, 'Please enter your name'),
   phone: z.string().regex(/^[6-9]\d{9}$/, 'Enter a valid 10-digit Indian mobile number'),
-  interest: z.string().min(1, 'Please select a property type'),
+  interest: z.array(z.string()).min(1, 'Please select at least one project'),
 })
 
 type FormData = z.infer<typeof schema>
@@ -39,7 +55,7 @@ export default function CallbackForm({ waNumber, phone }: CallbackFormProps) {
         to: 'info@slabsandbeams.com,contact@coldscale.in',
         name: data.name,
         phone: data.phone,
-        interest: data.interest,
+        interest: data.interest.join(', '),
         botcheck: '',
       }
 
@@ -115,10 +131,13 @@ export default function CallbackForm({ waNumber, phone }: CallbackFormProps) {
               <input type="hidden" name="botcheck" />
 
               <div>
-                <label className="block text-sm font-semibold text-dark-text mb-1">Your Name</label>
+                <label className="block text-sm font-semibold text-dark-text mb-1">
+                  Your Name <span className="text-red-500">*</span>
+                </label>
                 <input
                   {...register('name')}
                   type="text"
+                  required
                   placeholder="Enter your full name"
                   className="w-full border border-border-gray rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors"
                 />
@@ -126,10 +145,13 @@ export default function CallbackForm({ waNumber, phone }: CallbackFormProps) {
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-dark-text mb-1">Mobile Number</label>
+                <label className="block text-sm font-semibold text-dark-text mb-1">
+                  Mobile Number <span className="text-red-500">*</span>
+                </label>
                 <input
                   {...register('phone')}
                   type="tel"
+                  required
                   placeholder="10-digit mobile number"
                   className="w-full border border-border-gray rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors"
                 />
@@ -137,17 +159,22 @@ export default function CallbackForm({ waNumber, phone }: CallbackFormProps) {
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-dark-text mb-1">Property Interest</label>
+                <label className="block text-sm font-semibold text-dark-text mb-1">
+                  Project Interest <span className="text-red-500">*</span>
+                </label>
+                <p className="text-xs text-gray-400 mb-1">Hold Ctrl / Cmd to select multiple projects</p>
                 <select
                   {...register('interest')}
-                  className="w-full border border-border-gray rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors bg-white"
+                  multiple
+                  required
+                  size={7}
+                  className="w-full border border-border-gray rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors bg-white"
                 >
-                  <option value="">Select property type</option>
-                  <option value="Office Space">Office Space</option>
-                  <option value="Showroom & Office">Showroom &amp; Office</option>
-                  <option value="Retail Shop">Retail Shop</option>
-                  <option value="Commercial Investment">Commercial Investment</option>
-                  <option value="All Properties">All Properties</option>
+                  {projectOptions.map((project) => (
+                    <option key={project} value={project} className="py-1">
+                      {project}
+                    </option>
+                  ))}
                 </select>
                 {errors.interest && <p className="text-red-500 text-xs mt-1">{errors.interest.message}</p>}
               </div>

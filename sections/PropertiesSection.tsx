@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { MapPin, MessageCircle, Phone, Download } from 'lucide-react'
+import { MapPin, MessageCircle, Phone, FileText } from 'lucide-react'
 import { properties } from '@/data/properties'
 import { getWhatsAppURL, trackWhatsApp, trackCall } from '@/lib/utils'
 
@@ -19,7 +19,7 @@ const locationTabs = [
 ]
 
 const locationMap: Record<string, string[]> = {
-  'Vaishnodevi Circle': ['Vaishnodevi', 'Nr. Vaishnodevi'],
+  'Vaishnodevi Circle': ['Vaishnodevi'],
   'GIFT City': ['GIFT City DTA', 'GIFT SEZ'],
   'Gota': ['Gota'],
   'Hebatpur': ['Hebatpur'],
@@ -138,13 +138,10 @@ export default function PropertiesSection({ waNumber, phone }: PropertiesSection
                     <Phone size={14} /> Call Now
                   </a>
                   <a
-                    href={getWhatsAppURL(waNumber, `Hi, I'd like to download the brochure for ${property.title} at ${property.location}. Please share it.`)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => trackWhatsApp(`brochure_${property.id}`)}
+                    href="#contact"
                     className="col-span-2 flex items-center justify-center gap-1 border border-gold text-gold text-sm py-2 rounded-lg hover:bg-gold hover:text-white transition-colors"
                   >
-                    <Download size={14} /> Download Brochure
+                    <FileText size={14} /> Inquire Now
                   </a>
                 </div>
               </div>
@@ -166,7 +163,7 @@ export default function PropertiesSection({ waNumber, phone }: PropertiesSection
             onClick={() => trackWhatsApp('properties_bottom')}
             className="inline-flex items-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-green-600 transition-colors shadow-lg"
           >
-            <MessageCircle size={20} /> Get All Property Details on WhatsApp
+            <MessageCircle size={20} /> Get Price / Brochure on WhatsApp
           </a>
         </motion.div>
       </div>

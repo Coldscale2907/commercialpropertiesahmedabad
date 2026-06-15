@@ -36,8 +36,8 @@ export default function ExitIntentPopup({ waNumber, phone }: ExitIntentPopupProp
 
             {/* Content */}
             <div className="text-center">
-              <span className="inline-block text-gold font-bold text-sm tracking-widest uppercase mb-3">
-                WAIT!
+              <span className="inline-block bg-gold text-charcoal font-bold text-sm tracking-widest uppercase px-4 py-1.5 rounded-full mb-3">
+                ✦ Zero Brokerage Deals
               </span>
               <h2 className="font-playfair text-white text-2xl font-bold mb-2">
                 Get Latest Price &amp; Brochure Instantly
