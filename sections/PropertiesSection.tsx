@@ -1,4 +1,5 @@
 'use client'
+import { useState } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { MapPin, MessageCircle, Phone, Download } from 'lucide-react'
@@ -7,12 +8,40 @@ import { getWhatsAppURL, trackWhatsApp, trackCall } from '@/lib/utils'
 
 const WA_MESSAGE = "Hi, I'm interested in commercial properties in Ahmedabad. Please share pricing and details."
 
+const locationTabs = [
+  'All',
+  'Vaishnodevi Circle',
+  'GIFT City',
+  'Gota',
+  'Hebatpur',
+  'Iskon-Ambli',
+  'Pakwan Circle',
+]
+
+const locationMap: Record<string, string[]> = {
+  'Vaishnodevi Circle': ['Vaishnodevi', 'Nr. Vaishnodevi'],
+  'GIFT City': ['GIFT City DTA', 'GIFT SEZ'],
+  'Gota': ['Gota'],
+  'Hebatpur': ['Hebatpur'],
+  'Iskon-Ambli': ['Iskon-Ambli'],
+  'Pakwan Circle': ['Pakwan Circle'],
+}
+
 interface PropertiesSectionProps {
   waNumber: string
   phone: string
 }
 
 export default function PropertiesSection({ waNumber, phone }: PropertiesSectionProps) {
+  const [activeTab, setActiveTab] = useState('All')
+
+  const filtered = properties.filter((p) => {
+    if (activeTab === 'All') return true
+    return (locationMap[activeTab] || []).some((loc) =>
+      p.location.toLowerCase().includes(loc.toLowerCase())
+    )
+  })
+
   return (
     <section id="properties" className="py-20 px-4 md:px-8 lg:px-16 bg-soft-white">
       <div className="max-w-7xl mx-auto">
@@ -33,15 +62,32 @@ export default function PropertiesSection({ waNumber, phone }: PropertiesSection
           </p>
         </motion.div>
 
+        {/* Location Tabs */}
+        <div className="flex flex-wrap justify-center gap-2 mb-10">
+          {locationTabs.map((tab) => (
+            <button
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              className={`px-5 py-2 rounded-full text-sm font-semibold transition-all ${
+                activeTab === tab
+                  ? 'bg-gold text-white shadow-md'
+                  : 'border border-gold text-gold hover:bg-gold/10'
+              }`}
+            >
+              {tab}
+            </button>
+          ))}
+        </div>
+
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {properties.map((property, i) => (
+          {filtered.map((property, i) => (
             <motion.div
               key={property.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1, duration: 0.5 }}
+              transition={{ delay: i * 0.05, duration: 0.5 }}
               className="group relative overflow-hidden rounded-2xl bg-white shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             >
               {/* Image */}
