@@ -8,19 +8,19 @@ import { CheckCircle2, Loader2, MessageCircle, Phone } from 'lucide-react'
 import { getWhatsAppURL, trackFormSubmit, trackWhatsApp, trackCall } from '@/lib/utils'
 
 const projectOptions = [
-  'Twin Towers',
-  'Wave',
-  'Brillia',
-  'Upcoming New Launch',
-  'The Prospera',
-  'Tremont Tower',
-  'Marvel',
-  'Centroid',
-  'Next',
-  'Centrica',
-  'Regalia 2',
-  'The Identity',
-  'Curv',
+  'Twin Towers by Trogon',
+  'Wave by Shivalik',
+  'Brillia by Pravish',
+  'Upcoming New Launch by Divyam Procon',
+  'The Prospera by Keshar',
+  'Tremont Tower by Tremont',
+  'Marvel by Times',
+  'Centroid by Sanghvi',
+  'Next by Pravish',
+  'Centrica by Shilp',
+  'Regalia 2 by Nakshatra',
+  'The Identity by Dobaria-Rashmi',
+  'Curv by Shivalik',
 ]
 
 const schema = z.object({
