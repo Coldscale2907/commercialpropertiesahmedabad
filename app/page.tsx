@@ -36,13 +36,6 @@ export default function Home() {
         </div>
 
         <PropertiesSection waNumber={waNumber} phone={phone} />
-        <WhatsAppCTABanner
-          heading="Need Instant Property Details?"
-          subtext="Our advisors are available now."
-          darkBg={false}
-          waNumber={waNumber}
-          phone={phone}
-        />
         <InvestmentHighlights />
         <WhyChooseSection />
         <CallbackForm waNumber={waNumber} phone={phone} />

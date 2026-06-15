@@ -86,8 +86,8 @@ export const properties: Property[] = [
   },
   {
     id: 'divyam-vaishnodevi',
-    title: 'Divyam',
-    builder: 'soon to be revealed',
+    title: 'Upcoming New Launch',
+    builder: 'Divyam Procon',
     location: 'Vaishnodevi',
     area: 'Vaishnodevi, Ahmedabad',
     category: 'Showroom & Office',
@@ -112,7 +112,7 @@ export const properties: Property[] = [
   },
   {
     id: 'keshar-vaishnodevi',
-    title: 'Keshar',
+    title: 'The Prospera',
     builder: 'Keshar',
     location: 'Vaishnodevi',
     area: 'Vaishnodevi, Ahmedabad',

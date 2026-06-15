@@ -11,8 +11,8 @@ const projectOptions = [
   'Twin Towers',
   'Wave',
   'Brillia',
-  'Divyam',
-  'Keshar',
+  'Upcoming New Launch',
+  'The Prospera',
   'Tremont Tower',
   'Marvel',
   'Centroid',
@@ -159,23 +159,22 @@ export default function CallbackForm({ waNumber, phone }: CallbackFormProps) {
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-dark-text mb-1">
+                <label className="block text-sm font-semibold text-dark-text mb-2">
                   Project Interest <span className="text-red-500">*</span>
                 </label>
-                <p className="text-xs text-gray-400 mb-1">Hold Ctrl / Cmd to select multiple projects</p>
-                <select
-                  {...register('interest')}
-                  multiple
-                  required
-                  size={7}
-                  className="w-full border border-border-gray rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors bg-white"
-                >
+                <div className="border border-border-gray rounded-lg px-4 py-3 grid grid-cols-1 gap-2 max-h-52 overflow-y-auto">
                   {projectOptions.map((project) => (
-                    <option key={project} value={project} className="py-1">
+                    <label key={project} className="flex items-center gap-2 text-sm text-gray-700 cursor-pointer hover:text-gold transition-colors">
+                      <input
+                        type="checkbox"
+                        value={project}
+                        {...register('interest')}
+                        className="accent-gold w-4 h-4 rounded"
+                      />
                       {project}
-                    </option>
+                    </label>
                   ))}
-                </select>
+                </div>
                 {errors.interest && <p className="text-red-500 text-xs mt-1">{errors.interest.message}</p>}
               </div>
 
