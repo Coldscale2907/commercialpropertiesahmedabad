@@ -128,6 +128,7 @@ export default function RootLayout({
   const ga4Id = process.env.NEXT_PUBLIC_GA4_ID
   const metaPixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID
   const gtmId = process.env.NEXT_PUBLIC_GTM_ID
+  const gAdsId = 'AW-18120845401'
 
   return (
     <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
@@ -156,6 +157,7 @@ export default function RootLayout({
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
                 gtag('config', '${ga4Id}');
+                gtag('config', '${gAdsId}');
               `}
             </Script>
           </>
