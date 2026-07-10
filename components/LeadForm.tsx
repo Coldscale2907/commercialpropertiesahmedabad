@@ -47,7 +47,7 @@ export default function LeadForm({ waNumber, phone, source, className = '', vari
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
-  } = useForm<FormData>({ resolver: zodResolver(schema) })
+  } = useForm<FormData>({ resolver: zodResolver(schema), defaultValues: { interest: [] } })
 
   const onSubmit = async (data: FormData) => {
     try {
