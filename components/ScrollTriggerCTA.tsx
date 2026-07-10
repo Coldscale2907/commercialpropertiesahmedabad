@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, MessageCircle, Calendar } from 'lucide-react'
 import { useScrollProgress } from '@/hooks/useScrollProgress'
@@ -7,6 +7,7 @@ import { getWhatsAppURL, trackWhatsApp } from '@/lib/utils'
 
 const WA_MESSAGE = "Hi, I'm interested in commercial properties in Ahmedabad. Please share pricing and details."
 const WA_VISIT = "Hi, I'd like to schedule a site visit for commercial properties in Ahmedabad."
+const AUTO_DISMISS_MS = 8000
 
 interface ScrollTriggerCTAProps {
   waNumber: string
@@ -16,10 +17,17 @@ interface ScrollTriggerCTAProps {
 export default function ScrollTriggerCTA({ waNumber }: ScrollTriggerCTAProps) {
   const progress = useScrollProgress()
   const [dismissed, setDismissed] = useState(false)
+  const shown = progress > 30 && !dismissed
+
+  useEffect(() => {
+    if (!shown) return
+    const timer = setTimeout(() => setDismissed(true), AUTO_DISMISS_MS)
+    return () => clearTimeout(timer)
+  }, [shown])
 
   return (
     <AnimatePresence>
-      {progress > 30 && !dismissed && (
+      {shown && (
         <motion.div
           initial={{ x: 400, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
