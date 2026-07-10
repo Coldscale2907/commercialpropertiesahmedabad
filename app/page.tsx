@@ -26,11 +26,9 @@ export default function Home() {
         <TrustStrip />
 
         {/* Early callback form after proof points */}
-        <div className="bg-soft-white py-12 px-4 border-b border-border-gray">
-          <p className="text-gray-500 text-sm text-center mb-6">Looking for a commercial space in Ahmedabad?</p>
-          <div className="max-w-md mx-auto">
-            <LeadForm waNumber={waNumber} phone={phone} source="top_cta_form" />
-          </div>
+        <div className="bg-soft-white py-8 sm:py-12 border-b border-border-gray">
+          <p className="text-gray-500 text-sm text-center mb-4 sm:mb-6 px-4">Looking for a commercial space in Ahmedabad?</p>
+          <LeadForm waNumber={waNumber} phone={phone} source="top_cta_form" variant="full" />
         </div>
 
         <PropertiesSection waNumber={waNumber} phone={phone} />
