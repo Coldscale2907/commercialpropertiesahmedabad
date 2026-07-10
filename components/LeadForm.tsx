@@ -38,9 +38,10 @@ interface LeadFormProps {
   phone: string
   source: string
   className?: string
+  variant?: 'card' | 'full'
 }
 
-export default function LeadForm({ waNumber, phone, source, className = '' }: LeadFormProps) {
+export default function LeadForm({ waNumber, phone, source, className = '', variant = 'card' }: LeadFormProps) {
   const [submitted, setSubmitted] = useState(false)
   const {
     register,
@@ -87,7 +88,11 @@ export default function LeadForm({ waNumber, phone, source, className = '' }: Le
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className={`bg-white rounded-2xl p-8 shadow-2xl text-left ${className}`}
+      className={`bg-white text-left p-6 w-full ${
+        variant === 'full'
+          ? 'sm:max-w-lg sm:mx-auto sm:rounded-2xl sm:shadow-2xl sm:p-8'
+          : 'rounded-2xl shadow-2xl p-8'
+      } ${className}`}
     >
       {submitted ? (
         <div className="text-center py-8">
