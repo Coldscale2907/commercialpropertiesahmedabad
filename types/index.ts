@@ -23,6 +23,8 @@ export interface Property {
   remarks: string
   featured: boolean
   urgencyLabel?: string
+  description?: string
+  nearby?: { name: string; distance: string }[]
 }
 
 export interface TestimonialType {

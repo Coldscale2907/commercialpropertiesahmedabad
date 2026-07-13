@@ -1,9 +1,9 @@
 'use client'
 import { useEffect } from 'react'
-import Image from 'next/image'
-import { X, MapPin, Building2, MessageCircle, Phone, FileText } from 'lucide-react'
+import { X, MapPin, Building2, CheckCircle2, Navigation as NavigationIcon, MessageCircle, Phone, FileText } from 'lucide-react'
 import { Property } from '@/types'
 import { getWhatsAppURL, trackWhatsApp, trackCall } from '@/lib/utils'
+import ImageSlider from '@/components/ImageSlider'
 
 interface PropertyModalProps {
   property: Property | null
@@ -45,17 +45,9 @@ export default function PropertyModal({ property, onClose, waNumber, phone }: Pr
           <X size={18} />
         </button>
 
-        {/* Hero Image */}
-        <div className="relative h-[280px] w-full overflow-hidden rounded-t-2xl">
-          <Image
-            src={property.images[0]}
-            alt={property.title}
-            width={800}
-            height={280}
-            className="w-full h-full object-cover"
-            unoptimized
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-t-2xl" />
+        {/* Hero Image Slider */}
+        <div className="rounded-t-2xl overflow-hidden">
+          <ImageSlider images={property.images} alt={property.title} />
         </div>
 
         {/* Content */}
@@ -86,6 +78,29 @@ export default function PropertyModal({ property, onClose, waNumber, phone }: Pr
             </div>
           </div>
 
+          {/* About Project */}
+          {property.description && (
+            <div className="mb-5">
+              <h3 className="font-playfair font-semibold text-dark-text mb-2">About the Project</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">{property.description}</p>
+            </div>
+          )}
+
+          {/* Key Features */}
+          {property.highlights.length > 0 && (
+            <div className="mb-5">
+              <h3 className="font-playfair font-semibold text-dark-text mb-3">Key Features</h3>
+              <div className="space-y-2">
+                {property.highlights.map((h) => (
+                  <div key={h} className="flex items-start gap-2 text-sm text-gray-600">
+                    <CheckCircle2 size={14} className="text-gold shrink-0 mt-0.5" />
+                    <span>{h}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Amenities */}
           <div className="mb-5">
             <h3 className="font-playfair font-semibold text-dark-text mb-3">Amenities</h3>
@@ -98,6 +113,29 @@ export default function PropertyModal({ property, onClose, waNumber, phone }: Pr
               ))}
             </div>
           </div>
+
+          {/* Location & What's Nearby */}
+          {property.nearby && property.nearby.length > 0 && (
+            <div className="mb-5">
+              <h3 className="font-playfair font-semibold text-dark-text mb-1">Project Location</h3>
+              <div className="flex items-center gap-1 text-gray-500 text-sm mb-3">
+                <MapPin size={14} className="text-gold" />
+                <span>{property.area}</span>
+              </div>
+              <h4 className="text-sm font-semibold text-dark-text mb-2">What&apos;s Nearby</h4>
+              <div className="space-y-1.5">
+                {property.nearby.map((n) => (
+                  <div key={n.name} className="flex items-center justify-between gap-3 text-sm text-gray-600 border-b border-border-gray/60 pb-1.5 last:border-0">
+                    <span className="flex items-center gap-2">
+                      <NavigationIcon size={13} className="text-gold shrink-0" />
+                      {n.name}
+                    </span>
+                    <span className="text-dark-text font-medium whitespace-nowrap">{n.distance}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
         </div>
 

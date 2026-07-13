@@ -4,7 +4,9 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { MapPin, MessageCircle, Phone, FileText } from 'lucide-react'
 import { properties } from '@/data/properties'
+import { Property } from '@/types'
 import { getWhatsAppURL, trackWhatsApp, trackCall } from '@/lib/utils'
+import PropertyModal from '@/components/PropertyModal'
 
 const WA_MESSAGE = "Hi, I'm interested in commercial properties in Ahmedabad. Please share pricing and details."
 
@@ -34,6 +36,7 @@ interface PropertiesSectionProps {
 
 export default function PropertiesSection({ waNumber, phone }: PropertiesSectionProps) {
   const [activeTab, setActiveTab] = useState('All')
+  const [selected, setSelected] = useState<Property | null>(null)
 
   const filtered = properties.filter((p) => {
     if (activeTab === 'All') return true
@@ -88,7 +91,8 @@ export default function PropertiesSection({ waNumber, phone }: PropertiesSection
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05, duration: 0.5 }}
-              className="group relative overflow-hidden rounded-2xl bg-white shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              onClick={() => setSelected(property)}
+              className="group relative overflow-hidden rounded-2xl bg-white shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer"
             >
               {/* Image */}
               <div className="relative h-56 overflow-hidden rounded-t-2xl">
@@ -120,7 +124,7 @@ export default function PropertiesSection({ waNumber, phone }: PropertiesSection
                 </div>
 
                 {/* CTAs */}
-                <div className="grid grid-cols-2 gap-2">
+                <div className="grid grid-cols-2 gap-2" onClick={(e) => e.stopPropagation()}>
                   <a
                     href={getWhatsAppURL(waNumber, `Hi, I'm interested in ${property.title} at ${property.location}. Please share pricing.`)}
                     target="_blank"
@@ -167,6 +171,13 @@ export default function PropertiesSection({ waNumber, phone }: PropertiesSection
           </a>
         </motion.div>
       </div>
+
+      <PropertyModal
+        property={selected}
+        onClose={() => setSelected(null)}
+        waNumber={waNumber}
+        phone={phone}
+      />
     </section>
   )
 }
