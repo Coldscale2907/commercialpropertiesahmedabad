@@ -19,7 +19,13 @@ export const properties: Property[] = [
     possession: 'Mid 2027',
     paymentTerms: '60-40',
     bookingPercent: 10,
-    images: ['/properties/twin-towers.jpg'],
+    images: [
+      '/properties/Twin Towers/full-building-dusk.png',
+      '/properties/Twin Towers/exterior-closeup.png',
+      '/properties/Twin Towers/leisure-terrace-aerial.png',
+      '/properties/twin-towers.jpg',
+    ],
+    locationImage: '/properties/Twin Towers/location-map.png',
     description: "Ahmedabad's first twin tower architecture, Trogon Twin Towers takes shape at one of the most progressive city-junctions — the Ahmedabad-Gandhinagar Twin City node. Defined by two tall, futuristic identical towers built together as part of a single complex with shared infrastructure, it's designed as a wholesome business ecosystem: 32 levels, 125 metres tall, spanning 1.8 million sq.ft. of commercial space at the centre of the Twin City developments, at Vaishnodevi Circle.",
     highlights: [
       '32-floor iconic twin tower structure, 125 metres tall',

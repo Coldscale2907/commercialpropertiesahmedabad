@@ -25,6 +25,7 @@ export interface Property {
   urgencyLabel?: string
   description?: string
   nearby?: { name: string; distance: string }[]
+  locationImage?: string
 }
 
 export interface TestimonialType {

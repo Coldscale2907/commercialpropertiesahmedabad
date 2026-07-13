@@ -1,5 +1,6 @@
 'use client'
 import { useEffect } from 'react'
+import Image from 'next/image'
 import { X, MapPin, Building2, CheckCircle2, Navigation as NavigationIcon, MessageCircle, Phone, FileText } from 'lucide-react'
 import { Property } from '@/types'
 import { getWhatsAppURL, trackWhatsApp, trackCall } from '@/lib/utils'
@@ -122,6 +123,17 @@ export default function PropertyModal({ property, onClose, waNumber, phone }: Pr
                 <MapPin size={14} className="text-gold" />
                 <span>{property.area}</span>
               </div>
+              {property.locationImage && (
+                <div className="relative w-full h-48 rounded-lg overflow-hidden mb-3">
+                  <Image
+                    src={property.locationImage}
+                    alt={`${property.title} location map`}
+                    fill
+                    className="object-cover"
+                    unoptimized
+                  />
+                </div>
+              )}
               <h4 className="text-sm font-semibold text-dark-text mb-2">What&apos;s Nearby</h4>
               <div className="space-y-1.5">
                 {property.nearby.map((n) => (
