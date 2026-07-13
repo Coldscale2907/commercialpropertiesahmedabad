@@ -16,9 +16,9 @@ export function trackCall(source: string) {
   if ((window as any).gtag) (window as any).gtag('event', 'phone_call', { event_category: 'conversion', event_label: source })
 }
 
-export function trackFormSubmit() {
+export function trackFormSubmit(source: string = 'callback_form') {
   if (typeof window === 'undefined') return
-  if ((window as any).gtag) (window as any).gtag('event', 'form_submit', { event_category: 'lead', event_label: 'callback_form' })
+  if ((window as any).gtag) (window as any).gtag('event', 'form_submit', { event_category: 'lead', event_label: source })
   if ((window as any).fbq) (window as any).fbq('track', 'Lead')
 }
 
