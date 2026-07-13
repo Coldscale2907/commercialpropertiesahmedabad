@@ -54,7 +54,7 @@ export default function PropertiesSection({ waNumber, phone }: PropertiesSection
         >
           <span className="text-gold text-xs font-semibold tracking-widest uppercase">OUR PORTFOLIO</span>
           <h2 className="font-playfair font-bold text-dark-text text-3xl md:text-4xl mt-2 mb-4">
-            Premium Commercial Properties in Ahmedabad
+            Explore Our Curated Property Portfolio
           </h2>
           <div className="w-16 h-0.5 bg-gold mx-auto mb-4" />
           <p className="text-gray-500 text-base max-w-2xl mx-auto">
