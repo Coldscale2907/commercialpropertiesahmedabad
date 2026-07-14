@@ -23,18 +23,18 @@ export default function ImageSlider({ images, alt, heightClass = 'h-[380px]' }: 
   const goTo = (i: number) => setIndex((i + images.length) % images.length)
 
   return (
-    <div className={`relative w-full ${heightClass} overflow-hidden`}>
+    <div className={`relative w-full ${heightClass} overflow-hidden bg-charcoal`}>
       {images.map((src, i) => (
         <Image
           key={src + i}
           src={src}
           alt={`${alt} — photo ${i + 1}`}
           fill
-          className={`object-cover object-top transition-opacity duration-500 ${i === index ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+          className={`object-contain transition-opacity duration-500 ${i === index ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
           unoptimized
         />
       ))}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
 
       {images.length > 1 && (
         <>
