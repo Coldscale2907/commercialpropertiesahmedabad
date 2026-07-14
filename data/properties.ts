@@ -20,12 +20,11 @@ export const properties: Property[] = [
     paymentTerms: '60-40',
     bookingPercent: 10,
     images: [
-      '/properties/Twin Towers/full-building-dusk.png',
-      '/properties/Twin Towers/exterior-closeup.png',
+      '/properties/Twin Towers/render-full-building.jpeg',
+      '/properties/Twin Towers/render-tower-closeup.jpeg',
       '/properties/Twin Towers/leisure-terrace-aerial.png',
       '/properties/twin-towers.jpg',
     ],
-    locationImage: '/properties/Twin Towers/location-map.png',
     description: "Trogon Twin Towers is a premium commercial development at Vaishnodevi Circle, Ahmedabad. Featuring twin 32-storey towers with retail, restaurants and modern office spaces, it offers a future-ready business destination in the city's rapidly growing commercial corridor.",
     locationDescription: 'At the Ahmedabad-Gandhinagar Twin City corridor with seamless connectivity to SG Highway and SP Ring Road.',
     highlights: [
@@ -43,12 +42,12 @@ export const properties: Property[] = [
     featured: true,
     urgencyLabel: 'Ready to Move In',
     nearby: [
-      { name: 'Sardar Dham', distance: '500 m' },
-      { name: 'Zydus Corporate Office', distance: '500 m' },
-      { name: 'Nirma University', distance: '750 m' },
+      { name: 'Sardar Vallabhbhai Patel International Airport', distance: '15.5 km' },
+      { name: 'Ahmedabad Railway Station', distance: '15.8 km' },
+      { name: 'KD Hospital', distance: '1 km' },
       { name: 'Adani Shantigram', distance: '3.2 km' },
       { name: 'Ahmedabad-Gandhinagar Metro Station', distance: '3 km' },
-      { name: 'Sardar Vallabhbhai Patel International Airport', distance: '15.5 km' },
+      { name: 'GIFT City', distance: '20.5 km' },
     ],
   },
   {

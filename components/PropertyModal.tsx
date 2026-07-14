@@ -126,17 +126,15 @@ export default function PropertyModal({ property, onClose, waNumber, phone }: Pr
               {property.locationDescription && (
                 <p className="text-sm text-gray-600 leading-relaxed mb-3">{property.locationDescription}</p>
               )}
-              {property.locationImage && (
-                <div className="relative w-full h-48 rounded-lg overflow-hidden mb-3">
-                  <Image
-                    src={property.locationImage}
-                    alt={`${property.title} location map`}
-                    fill
-                    className="object-cover"
-                    unoptimized
-                  />
-                </div>
-              )}
+              <div className="w-full h-48 rounded-lg overflow-hidden mb-3 border border-border-gray">
+                <iframe
+                  src={`https://www.google.com/maps?q=${encodeURIComponent(`${property.title} ${property.builder}, ${property.area}`)}&output=embed`}
+                  className="w-full h-full border-0"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title={`${property.title} location map`}
+                />
+              </div>
               <h4 className="text-sm font-semibold text-dark-text mb-2">What&apos;s Nearby</h4>
               <div className="space-y-1.5">
                 {property.nearby.map((n) => (

@@ -9,7 +9,7 @@ interface ImageSliderProps {
   heightClass?: string
 }
 
-export default function ImageSlider({ images, alt, heightClass = 'h-[280px]' }: ImageSliderProps) {
+export default function ImageSlider({ images, alt, heightClass = 'h-[380px]' }: ImageSliderProps) {
   const [index, setIndex] = useState(0)
 
   useEffect(() => {
@@ -30,7 +30,7 @@ export default function ImageSlider({ images, alt, heightClass = 'h-[280px]' }: 
           src={src}
           alt={`${alt} — photo ${i + 1}`}
           fill
-          className={`object-cover transition-opacity duration-500 ${i === index ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+          className={`object-cover object-top transition-opacity duration-500 ${i === index ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
           unoptimized
         />
       ))}
