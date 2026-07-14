@@ -119,10 +119,13 @@ export default function PropertyModal({ property, onClose, waNumber, phone }: Pr
           {property.nearby && property.nearby.length > 0 && (
             <div className="mb-5">
               <h3 className="font-playfair font-semibold text-dark-text mb-1">Project Location</h3>
-              <div className="flex items-center gap-1 text-gray-500 text-sm mb-3">
+              <div className="flex items-center gap-1 text-gray-500 text-sm mb-1">
                 <MapPin size={14} className="text-gold" />
                 <span>{property.area}</span>
               </div>
+              {property.locationDescription && (
+                <p className="text-sm text-gray-600 leading-relaxed mb-3">{property.locationDescription}</p>
+              )}
               {property.locationImage && (
                 <div className="relative w-full h-48 rounded-lg overflow-hidden mb-3">
                   <Image

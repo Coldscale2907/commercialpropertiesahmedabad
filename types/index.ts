@@ -26,6 +26,7 @@ export interface Property {
   description?: string
   nearby?: { name: string; distance: string }[]
   locationImage?: string
+  locationDescription?: string
 }
 
 export interface TestimonialType {
