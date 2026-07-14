@@ -27,6 +27,7 @@ export const properties: Property[] = [
     ],
     description: "Trogon Twin Towers is a premium commercial development at Vaishnodevi Circle, Ahmedabad. Featuring twin 32-storey towers with retail, restaurants and modern office spaces, it offers a future-ready business destination in the city's rapidly growing commercial corridor.",
     locationDescription: 'At the Ahmedabad-Gandhinagar Twin City corridor with seamless connectivity to SG Highway and SP Ring Road.',
+    mapCid: '12156030877758870040',
     highlights: [
       'Twin 32-storey iconic towers',
       '125-metre landmark architecture',

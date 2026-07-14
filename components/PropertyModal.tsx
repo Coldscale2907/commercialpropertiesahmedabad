@@ -1,10 +1,37 @@
 'use client'
 import { useEffect } from 'react'
 import Image from 'next/image'
-import { X, MapPin, Building2, CheckCircle2, Navigation as NavigationIcon, MessageCircle, Phone, FileText } from 'lucide-react'
+import {
+  X, MapPin, Building2, CheckCircle2, Navigation as NavigationIcon, MessageCircle, Phone, FileText,
+  ArrowUpDown, Car, Zap, Camera, ShieldCheck, Flame, Briefcase, Users, UtensilsCrossed, Coffee, Baby, Droplets, Trees, ExternalLink,
+} from 'lucide-react'
 import { Property } from '@/types'
 import { getWhatsAppURL, trackWhatsApp, trackCall } from '@/lib/utils'
 import ImageSlider from '@/components/ImageSlider'
+
+const amenityIconRules: { keywords: string[]; icon: typeof Building2 }[] = [
+  { keywords: ['elevator'], icon: ArrowUpDown },
+  { keywords: ['parking'], icon: Car },
+  { keywords: ['power backup', 'power'], icon: Zap },
+  { keywords: ['surveillance', 'cctv', 'camera'], icon: Camera },
+  { keywords: ['security'], icon: ShieldCheck },
+  { keywords: ['fire safety', 'fire'], icon: Flame },
+  { keywords: ['business centre', 'business center'], icon: Briefcase },
+  { keywords: ['conference', 'seminar'], icon: Users },
+  { keywords: ['restaurant', 'dine', 'dining'], icon: UtensilsCrossed },
+  { keywords: ['café', 'cafe', 'kiosk'], icon: Coffee },
+  { keywords: ['crèche', 'creche', 'day care', 'daycare'], icon: Baby },
+  { keywords: ['water feature', 'fountain'], icon: Droplets },
+  { keywords: ['plaza', 'landscap', 'garden', 'sit-out', 'sitout', 'rooftop', 'terrace'], icon: Trees },
+]
+
+function getAmenityIcon(name: string) {
+  const lower = name.toLowerCase()
+  for (const rule of amenityIconRules) {
+    if (rule.keywords.some((k) => lower.includes(k))) return rule.icon
+  }
+  return Building2
+}
 
 interface PropertyModalProps {
   property: Property | null
@@ -106,12 +133,15 @@ export default function PropertyModal({ property, onClose, waNumber, phone }: Pr
           <div className="mb-5">
             <h3 className="font-playfair font-semibold text-dark-text mb-3">Amenities</h3>
             <div className="grid grid-cols-2 gap-2">
-              {property.amenities.map((a) => (
-                <div key={a} className="flex items-center gap-2 text-sm text-gray-600">
-                  <Building2 size={14} className="text-gold shrink-0" />
-                  <span>{a}</span>
-                </div>
-              ))}
+              {property.amenities.map((a) => {
+                const AmenityIcon = getAmenityIcon(a)
+                return (
+                  <div key={a} className="flex items-center gap-2 text-sm text-gray-600">
+                    <AmenityIcon size={14} className="text-gold shrink-0" />
+                    <span>{a}</span>
+                  </div>
+                )
+              })}
             </div>
           </div>
 
@@ -126,16 +156,32 @@ export default function PropertyModal({ property, onClose, waNumber, phone }: Pr
               {property.locationDescription && (
                 <p className="text-sm text-gray-600 leading-relaxed mb-3">{property.locationDescription}</p>
               )}
-              <div className="w-full h-48 rounded-lg overflow-hidden mb-3 border border-border-gray">
+              <div className="w-full h-64 rounded-lg overflow-hidden mb-2 border border-border-gray">
                 <iframe
-                  src={`https://www.google.com/maps?q=${encodeURIComponent(`${property.title} ${property.builder}, ${property.area}`)}&output=embed`}
+                  src={
+                    property.mapCid
+                      ? `https://www.google.com/maps?cid=${property.mapCid}&output=embed`
+                      : `https://www.google.com/maps?q=${encodeURIComponent(`${property.title} ${property.builder}, ${property.area}`)}&output=embed`
+                  }
                   className="w-full h-full border-0"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   title={`${property.title} location map`}
                 />
               </div>
-              <h4 className="text-sm font-semibold text-dark-text mb-2">What&apos;s Nearby</h4>
+              <a
+                href={
+                  property.mapCid
+                    ? `https://maps.google.com/?cid=${property.mapCid}`
+                    : `https://maps.google.com/?q=${encodeURIComponent(`${property.title} ${property.builder}, ${property.area}`)}`
+                }
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-xs text-gold font-medium mb-3 hover:underline"
+              >
+                Open in Google Maps <ExternalLink size={12} />
+              </a>
+              <h4 className="text-sm font-semibold text-dark-text mb-2">Key Landmarks</h4>
               <div className="space-y-1.5">
                 {property.nearby.map((n) => (
                   <div key={n.name} className="flex items-center justify-between gap-3 text-sm text-gray-600 border-b border-border-gray/60 pb-1.5 last:border-0">
