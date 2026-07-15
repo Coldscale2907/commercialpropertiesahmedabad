@@ -159,8 +159,8 @@ export default function PropertyModal({ property, onClose, waNumber, phone }: Pr
               <div className="w-full h-64 rounded-lg overflow-hidden mb-2 border border-border-gray">
                 <iframe
                   src={
-                    property.mapCid
-                      ? `https://www.google.com/maps?cid=${property.mapCid}&output=embed`
+                    property.mapCid && property.mapCoords
+                      ? `https://www.google.com/maps?ll=${property.mapCoords}&z=16&output=embed&cid=${property.mapCid}`
                       : `https://www.google.com/maps?q=${encodeURIComponent(property.mapQuery || `${property.title} ${property.builder}, ${property.area}`)}&output=embed`
                   }
                   className="w-full h-full border-0"

@@ -27,6 +27,7 @@ export interface Property {
   nearby?: { name: string; distance: string }[]
   locationDescription?: string
   mapCid?: string
+  mapCoords?: string
   mapQuery?: string
 }
 
