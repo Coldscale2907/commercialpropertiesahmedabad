@@ -15,7 +15,7 @@ const projectOptions = [
   'Tremont Tower by Tremont',
   'Marvel by Times',
   'Centroid by Sanghvi',
-  'Next by Pravish',
+  'Brillia NXT by Pravish',
   'Centrica by Shilp',
   'Regalia 2 by Nakshatra',
   'The Identity by Dobaria-Rashmi',

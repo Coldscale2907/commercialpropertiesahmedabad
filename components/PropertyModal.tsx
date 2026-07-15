@@ -161,7 +161,7 @@ export default function PropertyModal({ property, onClose, waNumber, phone }: Pr
                   src={
                     property.mapCid
                       ? `https://www.google.com/maps?cid=${property.mapCid}&output=embed`
-                      : `https://www.google.com/maps?q=${encodeURIComponent(`${property.title} ${property.builder}, ${property.area}`)}&output=embed`
+                      : `https://www.google.com/maps?q=${encodeURIComponent(property.mapQuery || `${property.title} ${property.builder}, ${property.area}`)}&output=embed`
                   }
                   className="w-full h-full border-0"
                   loading="lazy"
@@ -173,7 +173,7 @@ export default function PropertyModal({ property, onClose, waNumber, phone }: Pr
                 href={
                   property.mapCid
                     ? `https://maps.google.com/?cid=${property.mapCid}`
-                    : `https://maps.google.com/?q=${encodeURIComponent(`${property.title} ${property.builder}, ${property.area}`)}`
+                    : `https://maps.google.com/?q=${encodeURIComponent(property.mapQuery || `${property.title} ${property.builder}, ${property.area}`)}`
                 }
                 target="_blank"
                 rel="noopener noreferrer"
