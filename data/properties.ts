@@ -218,7 +218,7 @@ export const properties: Property[] = [
     possession: 'Dec 2028',
     paymentTerms: '50-50',
     bookingPercent: 10,
-    images: ['/properties/Keshar.jpg'],
+    images: ['/properties/prospera.jpg'],
     description: 'Prospera is a premium mixed-use commercial development located at Vaishnodevi Circle, SG Highway, Ahmedabad. Designed as a contemporary business destination, it offers premium retail spaces, restaurants and office spaces with excellent visibility, modern infrastructure and seamless connectivity to Ahmedabad and Gandhinagar. The project is positioned to cater to growing retail brands, corporate offices and investment opportunities.',
     locationDescription: "Strategically located on Ahmedabad's prime commercial corridor with excellent connectivity to SP Ring Road, Gandhinagar and major residential townships.",
     highlights: [
