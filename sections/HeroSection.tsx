@@ -73,7 +73,7 @@ export default function HeroSection({ waNumber, phone }: HeroSectionProps) {
           transition={{ delay: 0.5, duration: 0.6 }}
           className="text-white/80 text-base md:text-lg max-w-2xl mx-auto leading-relaxed"
         >
-          Discover premium commercial projects across Gift City, Vaishnodevi Circle, SG Highway, Iskon-Ambli Road, &amp; more, with expert guidance from Slabs and Beams Realty.
+          Discover premium commercial projects in Ahmedabad across Gift City, Vaishnodevi Circle, SG Highway, Iskon-Ambli Road, &amp; more, with expert guidance from Slabs and Beams Realty.
         </motion.p>
 
         {/* Zero Brokerage Badge */}

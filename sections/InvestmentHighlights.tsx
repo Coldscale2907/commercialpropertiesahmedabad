@@ -4,7 +4,7 @@ import { CheckCircle2 } from 'lucide-react'
 
 const bullets = [
   'Fastest growing Tier-1 commercial market in India',
-  'GIFT City driving massive commercial and office demand',
+  'Gift City commercial property driving massive commercial and office demand',
   'SG Highway: India\'s premium commercial corridor',
   'Metro connectivity boosting commercial property values',
   'Strong rental yields of 6-9% annually on commercial spaces',

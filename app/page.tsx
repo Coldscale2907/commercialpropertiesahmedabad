@@ -11,7 +11,6 @@ import PropertiesSection from '@/sections/PropertiesSection'
 import WhatsAppCTABanner from '@/sections/WhatsAppCTABanner'
 import InvestmentHighlights from '@/sections/InvestmentHighlights'
 import WhyChooseSection from '@/sections/WhyChooseSection'
-import CallbackForm from '@/sections/CallbackForm'
 import AboutSection from '@/sections/AboutSection'
 
 const waNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '919898989898'
@@ -30,7 +29,6 @@ export default function Home() {
         <PropertiesSection waNumber={waNumber} phone={phone} />
         <InvestmentHighlights />
         <WhyChooseSection />
-        <CallbackForm waNumber={waNumber} phone={phone} />
         <WhatsAppCTABanner
           heading="Talk to Our Commercial Property Advisors"
           subtext="Get brochures &amp; site visit details instantly."
