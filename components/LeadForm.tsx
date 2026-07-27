@@ -20,6 +20,8 @@ const projectOptions = [
   'Regalia 2 by Nakshatra',
   'The Identity by Dobaria-Rashmi',
   'Curv by Shivalik',
+  'The Citadel',
+  'Upcoming Launch at SBR',
 ]
 
 const schema = z.object({
