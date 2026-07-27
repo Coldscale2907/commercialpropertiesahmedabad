@@ -35,7 +35,7 @@ export default function HeroSection({ waNumber, phone }: HeroSectionProps) {
           transition={{ delay: 0.1, duration: 0.6 }}
           className="inline-block bg-gold/20 border border-gold/40 text-gold text-xs md:text-sm font-semibold tracking-[0.15em] uppercase px-5 py-2 rounded-full mb-6"
         >
-          AHMEDABAD&apos;S PREMIER COMMERCIAL REAL ESTATE ADVISORY
+          AHMEDABAD&apos;S PREMIER COMMERCIAL REAL ESTATE CONSULTANT
         </motion.div>
 
         {/* H1 */}

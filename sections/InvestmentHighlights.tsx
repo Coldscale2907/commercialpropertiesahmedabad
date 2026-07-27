@@ -29,9 +29,9 @@ export default function InvestmentHighlights() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-gold text-xs font-semibold tracking-widest uppercase">WHY INVEST IN AHMEDABAD</span>
+          <span className="text-gold text-xs font-semibold tracking-widest uppercase">WHY CHOOSE AHMEDABAD</span>
           <h2 className="font-playfair font-bold text-dark-text text-3xl md:text-4xl mt-2 mb-6">
-            Why Ahmedabad is India&apos;s Next Commercial Investment Hub
+            Why Ahmedabad is India&apos;s Next Commercial Properties Hub
           </h2>
           <div className="space-y-4 mb-8">
             {bullets.map((bullet, i) => (
