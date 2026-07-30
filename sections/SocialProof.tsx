@@ -13,7 +13,7 @@ const testimonials = [
   },
   {
     name: 'Priya Shah',
-    role: 'Retail Investor',
+    role: 'Retail Customer',
     city: 'Surat',
     initial: 'P',
     stars: 5,
@@ -21,7 +21,7 @@ const testimonials = [
   },
   {
     name: 'Amit Patel',
-    role: 'HNI Investor',
+    role: 'HNI Customer',
     city: 'Vadodara',
     initial: 'A',
     stars: 5,
@@ -30,7 +30,7 @@ const testimonials = [
 ]
 
 const trustMetrics = [
-  '500+ Happy Investors',
+  '500+ Happy Customers',
   '100% Verified Listings',
   '5-Star Rated Advisory',
 ]
@@ -47,7 +47,7 @@ export default function SocialProof() {
         >
           <span className="text-gold text-xs font-semibold tracking-widest uppercase">TESTIMONIALS</span>
           <h2 className="font-playfair font-bold text-dark-text text-3xl md:text-4xl mt-2 mb-3">
-            Trusted by Investors Across Gujarat
+            Trusted by Customers Across Gujarat
           </h2>
           <div className="w-16 h-0.5 bg-gold mx-auto" />
         </motion.div>

@@ -8,7 +8,7 @@ const reasons = [
   { icon: MapPin, title: 'Deep Ahmedabad Market Knowledge', desc: 'Years of expertise across prime Ahmedabad corridors: Vaishnodevi, SG Highway, Iskon-Ambli and beyond.' },
   { icon: Users, title: 'Personalized Property Guidance', desc: 'One-on-one advisory tailored to your budget, business goals, and preferences.' },
   { icon: Zap, title: 'Fast & Transparent Process', desc: 'Zero hidden charges, transparent documentation, and quick turnaround from inquiry to booking.' },
-  { icon: Award, title: 'Trusted by 500+ Investors', desc: 'Over 500 investors and businesses trust Slabs and Beams Realty for their commercial property decisions.' },
+  { icon: Award, title: 'Trusted by 500+ Customers', desc: 'Over 500 customers and businesses trust Slabs and Beams Realty for their commercial property decisions.' },
 ]
 
 export default function WhyChooseSection() {

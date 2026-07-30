@@ -270,7 +270,7 @@ export const properties: Property[] = [
     paymentTerms: 'TBD',
     bookingPercent: 10,
     images: ['/properties/Tremont Tower.png'],
-    description: "Tremont Tower is a premium commercial development in Gota, Ahmedabad, offering contemporary office spaces and retail showrooms in one of the city's fastest-growing commercial corridors. Designed with modern architecture, efficient floor planning and premium business infrastructure, the project provides an ideal destination for corporate offices, retail brands and investors.",
+    description: "Tremont Tower is a premium commercial development in Gota, Ahmedabad, offering contemporary office spaces and retail showrooms in one of the city's fastest-growing commercial corridors. Designed with modern architecture, efficient floor planning and premium business infrastructure, the project provides an ideal destination for corporate offices, retail brands and customers.",
     locationDescription: 'Strategically located with excellent connectivity to SG Highway, Sardar Patel Ring Road and key residential neighbourhoods, making it an attractive destination for businesses and retail establishments.',
     highlights: [
       'Premium commercial tower',
@@ -318,7 +318,7 @@ export const properties: Property[] = [
     bookingPercent: 10,
     images: ['/properties/TIMES MARVEL.png'],
     mapQuery: 'Times Marvel, Hebatpur, Thaltej, Ahmedabad',
-    description: "Times Marvel is a premium commercial development in Hebatpur, Thaltej, Ahmedabad, offering modern office spaces, retail shops and showrooms in a landmark 35-storey commercial tower. Designed to cater to businesses, retailers and investors, the project combines contemporary architecture, premium amenities and excellent connectivity in one of Ahmedabad's fastest-growing commercial corridors.",
+    description: "Times Marvel is a premium commercial development in Hebatpur, Thaltej, Ahmedabad, offering modern office spaces, retail shops and showrooms in a landmark 35-storey commercial tower. Designed to cater to businesses, retailers and customers, the project combines contemporary architecture, premium amenities and excellent connectivity in one of Ahmedabad's fastest-growing commercial corridors.",
     locationDescription: 'Strategically located near Zydus Hospital Road with excellent connectivity to SG Highway, Science City Road, Thaltej, Sindhu Bhavan Road and major residential catchments, making it an ideal destination for corporate offices and retail businesses.',
     highlights: [
       '35-storey landmark commercial tower',
@@ -518,7 +518,7 @@ export const properties: Property[] = [
       '/properties/Regalia 2/PHOTO-2026-06-06-12-25-20 3.jpg',
     ],
     mapQuery: 'Regalia II Nakshatra, Plot No. 56M, behind GIFT Tower 1, GIFT City, Gandhinagar',
-    description: "Regalia II is a premium commercial development by Nakshatra Group, strategically located in GIFT City, Gandhinagar. Designed as an ultra-modern commercial destination, the project offers premium office spaces, retail shops and showrooms with world-class infrastructure, sustainable design and excellent connectivity within India's first operational smart financial city. Positioned in the heart of GIFT City's Central Business District, Regalia II caters to corporate offices, fintech companies, retail brands and investors.",
+    description: "Regalia II is a premium commercial development by Nakshatra Group, strategically located in GIFT City, Gandhinagar. Designed as an ultra-modern commercial destination, the project offers premium office spaces, retail shops and showrooms with world-class infrastructure, sustainable design and excellent connectivity within India's first operational smart financial city. Positioned in the heart of GIFT City's Central Business District, Regalia II caters to corporate offices, fintech companies, retail brands and customers.",
     locationDescription: 'Strategically located within the Central Business District of GIFT City with seamless connectivity to the GIFT City Metro, Ahmedabad, Gandhinagar and major financial institutions.',
     highlights: [
       'Premium offices, retail shops & showrooms',

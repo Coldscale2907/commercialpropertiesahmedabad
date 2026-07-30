@@ -19,7 +19,7 @@ export default function Footer({ waNumber, phone }: FooterProps) {
           </div>
           <div className="text-gray-400 text-sm">Powered by Slabs and Beams Realty</div>
           <p className="text-gray-400 text-sm mt-3 max-w-md lg:max-w-xs">
-            Ahmedabad&apos;s premier commercial real estate advisory, connecting investors and businesses with prime commercial spaces.
+            Ahmedabad&apos;s premier commercial real estate advisory, connecting customers and businesses with prime commercial spaces.
           </p>
         </div>
 

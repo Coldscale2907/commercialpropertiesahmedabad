@@ -49,7 +49,7 @@ export default function AboutSection({ waNumber }: AboutSectionProps) {
           {/* Gold Accent Box */}
           <div className="border-l-4 border-gold bg-beige pl-5 py-3 rounded-r-lg mb-6">
             <p className="text-dark-text text-base font-semibold italic">
-              &ldquo;Ahmedabad&apos;s most trusted name in commercial real estate advisory, connecting investors and businesses with premium properties since 2014.&rdquo;
+              &ldquo;Ahmedabad&apos;s most trusted name in commercial real estate advisory, connecting customers and businesses with premium properties since 2014.&rdquo;
             </p>
           </div>
 
@@ -61,7 +61,7 @@ export default function AboutSection({ waNumber }: AboutSectionProps) {
               Our team of experienced advisors provides unbiased, data-driven guidance to business owners and property buyers looking to benefit from Ahmedabad&apos;s booming commercial real estate market.
             </p>
             <p>
-              With over 500 successful investor connections and a portfolio of 10+ premium projects, we are committed to transparent, ethical, and result-oriented real estate advisory.
+              With over 500 successful customer connections and a portfolio of 10+ premium projects, we are committed to transparent, ethical, and result-oriented real estate advisory.
             </p>
           </div>
 
