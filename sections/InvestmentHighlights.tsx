@@ -15,7 +15,7 @@ const stats = [
   { value: 'Strong', label: 'Rental Demand' },
   { value: 'High', label: 'Growth Potential' },
   { value: '10+', label: 'Premium Ahmedabad Zones' },
-  { value: '100+', label: 'Happy Investors' },
+  { value: '100+', label: 'Happy Customers' },
 ]
 
 export default function InvestmentHighlights() {
