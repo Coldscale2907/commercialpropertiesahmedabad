@@ -63,7 +63,7 @@ export default function HeroSection({ waNumber, phone }: HeroSectionProps) {
           transition={{ delay: 0.4, duration: 0.6 }}
           className="text-gold text-xl font-semibold mb-3"
         >
-          High-Growth Commercial Spaces for Investors, Businesses &amp; Brands.
+          Premium Commercial Spaces for Businesses &amp; Brands.
         </motion.p>
 
         {/* Body */}

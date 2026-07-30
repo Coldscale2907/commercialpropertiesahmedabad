@@ -4,7 +4,7 @@ import { MapPin, TrendingUp, ShieldCheck, Headphones } from 'lucide-react'
 
 const stats = [
   { icon: MapPin, label: 'Prime Commercial Locations' },
-  { icon: TrendingUp, label: 'High ROI Investment Opportunities' },
+  { icon: TrendingUp, label: 'Premium Commercial Opportunities' },
   { icon: ShieldCheck, label: 'Verified Property Listings' },
   { icon: Headphones, label: 'End-to-End Assistance' },
 ]

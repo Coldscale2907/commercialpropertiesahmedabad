@@ -4,9 +4,9 @@ import { ShieldCheck, TrendingUp, MapPin, Users, Zap, Award } from 'lucide-react
 
 const reasons = [
   { icon: ShieldCheck, title: 'Verified Commercial Listings', desc: 'Every project is thoroughly verified for legal compliance, builder credibility, and investment potential.' },
-  { icon: TrendingUp, title: 'Market-Leading ROI Advisory', desc: 'Our advisors identify high-yield commercial property in Ahmedabad with the best capital appreciation.' },
+  { icon: TrendingUp, title: 'Market-Leading Property Advisory', desc: 'Our advisors identify high-quality commercial properties in Ahmedabad with strong long-term potential.' },
   { icon: MapPin, title: 'Deep Ahmedabad Market Knowledge', desc: 'Years of expertise across prime Ahmedabad corridors: Vaishnodevi, SG Highway, Iskon-Ambli and beyond.' },
-  { icon: Users, title: 'Personalized Investment Guidance', desc: 'One-on-one advisory tailored to your budget, investment goals, and risk profile.' },
+  { icon: Users, title: 'Personalized Property Guidance', desc: 'One-on-one advisory tailored to your budget, business goals, and preferences.' },
   { icon: Zap, title: 'Fast & Transparent Process', desc: 'Zero hidden charges, transparent documentation, and quick turnaround from inquiry to booking.' },
   { icon: Award, title: 'Trusted by 500+ Investors', desc: 'Over 500 investors and businesses trust Slabs and Beams Realty for their commercial property decisions.' },
 ]

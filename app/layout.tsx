@@ -18,7 +18,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Commercial Properties Ahmedabad | Slabs and Beams Realty',
   description:
-    'Discover premium commercial properties in Ahmedabad. Office spaces, showrooms & retail shops across Vaishnodevi, SG Highway, Iskon-Ambli. Expert advisory by Slabs and Beams Realty. High ROI, verified listings.',
+    'Discover premium commercial properties in Ahmedabad. Office spaces, showrooms & retail shops across Vaishnodevi, SG Highway, Iskon-Ambli. Expert advisory by Slabs and Beams Realty. Trusted, verified listings.',
   keywords:
     'commercial properties Ahmedabad, office space Ahmedabad, retail shop Ahmedabad, showroom Ahmedabad, commercial real estate Ahmedabad, SG Highway office, Vaishnodevi commercial, Iskon-Ambli showroom, Hebatpur office, Slabs and Beams Realty',
   authors: [{ name: 'Slabs and Beams Realty' }],
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     siteName: 'Commercial Properties Ahmedabad',
     title: 'Commercial Properties Ahmedabad | Slabs and Beams Realty',
     description:
-      'Premium commercial properties in Ahmedabad. Office spaces, showrooms & retail shops with high ROI potential. Expert advisory by Slabs and Beams Realty.',
+      'Premium commercial properties in Ahmedabad. Office spaces, showrooms & retail shops with strong growth potential. Expert advisory by Slabs and Beams Realty.',
     images: [
       {
         url: 'https://commercialpropertiesahmedabad.in/properties/twin-towers.jpg',
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Commercial Properties Ahmedabad | Slabs and Beams Realty',
     description:
-      'Premium commercial properties in Ahmedabad: offices, showrooms, retail. High ROI, verified listings.',
+      'Premium commercial properties in Ahmedabad: offices, showrooms, retail. Trusted, verified listings.',
     images: ['https://commercialpropertiesahmedabad.in/properties/twin-towers.jpg'],
   },
 }

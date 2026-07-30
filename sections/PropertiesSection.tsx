@@ -61,7 +61,7 @@ export default function PropertiesSection({ waNumber, phone }: PropertiesSection
           </h2>
           <div className="w-16 h-0.5 bg-gold mx-auto mb-4" />
           <p className="text-gray-500 text-base max-w-2xl mx-auto">
-            Carefully selected commercial projects in Ahmedabad with high investment potential across prime Ahmedabad locations.
+            Carefully selected commercial projects across prime Ahmedabad locations.
           </p>
         </motion.div>
 

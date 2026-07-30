@@ -7,13 +7,13 @@ const bullets = [
   'Gift City commercial property driving massive commercial and office demand',
   'SG Highway: India\'s premium commercial corridor',
   'Metro connectivity boosting commercial property values',
-  'Strong rental yields of 6-9% annually on commercial spaces',
-  'Rising HNI, institutional and NRI investment',
+  'Consistently strong rental demand for commercial spaces',
+  'Rising interest from institutional and NRI buyers',
 ]
 
 const stats = [
-  { value: '6–9%', label: 'Annual Rental Yield' },
-  { value: '15–25%', label: 'Capital Appreciation' },
+  { value: 'Strong', label: 'Rental Demand' },
+  { value: 'High', label: 'Growth Potential' },
   { value: '10+', label: 'Premium Ahmedabad Zones' },
   { value: '100+', label: 'Happy Investors' },
 ]

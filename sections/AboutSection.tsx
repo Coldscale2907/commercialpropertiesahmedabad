@@ -58,7 +58,7 @@ export default function AboutSection({ waNumber }: AboutSectionProps) {
               Slabs and Beams Realty is a specialized commercial real estate advisory firm based in Ahmedabad, Gujarat. We focus exclusively on commercial properties: office spaces, showrooms, and retail shops, across Ahmedabad&apos;s fastest-growing corridors.
             </p>
             <p>
-              Our team of experienced advisors provides unbiased, data-driven investment guidance to HNI investors, business owners, and retail investors looking to capitalize on Ahmedabad&apos;s booming commercial real estate market.
+              Our team of experienced advisors provides unbiased, data-driven guidance to business owners and property buyers looking to benefit from Ahmedabad&apos;s booming commercial real estate market.
             </p>
             <p>
               With over 500 successful investor connections and a portfolio of 10+ premium projects, we are committed to transparent, ethical, and result-oriented real estate advisory.
