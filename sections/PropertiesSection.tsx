@@ -12,8 +12,8 @@ const WA_MESSAGE = "Hi, I'm interested in commercial properties in Ahmedabad. Pl
 
 const locationTabs = [
   'All',
-  'Vaishnodevi Circle',
   'GIFT City',
+  'Vaishnodevi Circle',
   'Gota',
   'Hebatpur',
   'Iskon-Ambli',
