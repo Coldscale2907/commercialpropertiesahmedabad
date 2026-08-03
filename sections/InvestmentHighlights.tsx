@@ -20,7 +20,7 @@ const stats = [
 
 export default function InvestmentHighlights() {
   return (
-    <section id="investment" className="py-20 px-4 md:px-8 lg:px-16 bg-white">
+    <section id="why-choose-ahmedabad" className="py-20 px-4 md:px-8 lg:px-16 bg-white">
       <div className="max-w-7xl mx-auto lg:grid lg:grid-cols-2 gap-16 items-center">
         {/* Left */}
         <motion.div

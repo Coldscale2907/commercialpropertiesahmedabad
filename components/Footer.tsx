@@ -40,7 +40,7 @@ export default function Footer({ waNumber, phone }: FooterProps) {
               {[
                 { label: 'Home', href: '#' },
                 { label: 'All Properties', href: '#properties' },
-                { label: 'Property Guide', href: '#investment' },
+                { label: 'Property Guide', href: '#why-choose-ahmedabad' },
                 { label: 'About Us', href: '#about' },
                 { label: 'Contact', href: '#contact' },
               ].map((link) => (

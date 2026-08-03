@@ -8,7 +8,7 @@ import { getWhatsAppURL, trackWhatsApp, trackCall } from '@/lib/utils'
 const navLinks = [
   { label: 'Home', href: '#' },
   { label: 'Properties', href: '#properties' },
-  { label: 'Why Ahmedabad', href: '#investment' },
+  { label: 'Why Ahmedabad', href: '#why-choose-ahmedabad' },
   { label: 'Locations', href: '#properties' },
   { label: 'About', href: '#about' },
   { label: 'Contact', href: '#contact' },
