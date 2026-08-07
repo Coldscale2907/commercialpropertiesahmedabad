@@ -111,10 +111,10 @@ const jsonLdFAQ = {
     },
     {
       '@type': 'Question',
-      name: 'How can I invest in commercial properties in Ahmedabad?',
+      name: 'How can I buy commercial properties in Ahmedabad?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Contact Slabs and Beams Realty for expert advisory. We help customers identify high-ROI commercial opportunities, handle documentation, and ensure transparent transactions across all premium Ahmedabad locations.',
+        text: 'Contact Slabs and Beams Realty for expert advisory. We help customers identify high-quality commercial opportunities, handle documentation, and ensure transparent transactions across all premium Ahmedabad locations.',
       },
     },
   ],

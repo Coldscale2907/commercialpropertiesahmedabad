@@ -243,7 +243,7 @@ export const properties: Property[] = [
       'Green building with professional property management',
     ],
     amenities: ['Business Centre', 'Conference & Seminar Rooms', 'Terrace Restaurants', 'Café Kiosks', 'Landscaped Central Plaza', 'Water Features & Sit-Outs', 'Crèche / Day Care', 'High-Tech Surveillance', 'Fire Safety Systems', '100% Power Backup for Common Areas'],
-    investmentTags: ['High ROI', 'Prime Location', 'Ready to Move', 'Vaishnodevi Corridor'],
+    investmentTags: ['High Demand', 'Prime Location', 'Ready to Move', 'Vaishnodevi Corridor'],
     remarks: '',
     featured: true,
     urgencyLabel: 'Ready to Move In',
@@ -422,7 +422,7 @@ export const properties: Property[] = [
     paymentTerms: '50-50',
     bookingPercent: 10,
     images: ['/properties/prospera.jpg'],
-    description: 'Prospera is a premium mixed-use commercial development located at Vaishnodevi Circle, SG Highway, Ahmedabad. Designed as a contemporary business destination, it offers premium retail spaces, restaurants and office spaces with excellent visibility, modern infrastructure and seamless connectivity to Ahmedabad and Gandhinagar. The project is positioned to cater to growing retail brands, corporate offices and investment opportunities.',
+    description: 'Prospera is a premium mixed-use commercial development located at Vaishnodevi Circle, SG Highway, Ahmedabad. Designed as a contemporary business destination, it offers premium retail spaces, restaurants and office spaces with excellent visibility, modern infrastructure and seamless connectivity to Ahmedabad and Gandhinagar. The project is positioned to cater to growing retail brands, corporate offices and expanding businesses.',
     locationDescription: "Strategically located on Ahmedabad's prime commercial corridor with excellent connectivity to SP Ring Road, Gandhinagar and major residential townships.",
     highlights: [
       'Premium retail shops, offices & restaurants',

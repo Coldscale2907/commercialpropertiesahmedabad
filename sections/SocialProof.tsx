@@ -17,7 +17,7 @@ const testimonials = [
     city: 'Surat',
     initial: 'P',
     stars: 5,
-    text: 'I invested in a showroom unit at Twin Towers on their recommendation. The ROI potential is exceptional. The team made the entire process seamless.',
+    text: 'I purchased a showroom unit at Twin Towers on their recommendation. The growth potential is exceptional. The team made the entire process seamless.',
   },
   {
     name: 'Amit Patel',
@@ -25,7 +25,7 @@ const testimonials = [
     city: 'Vadodara',
     initial: 'A',
     stars: 5,
-    text: 'Their transparent advisory and deep market knowledge made my commercial investment decision easy and confident. Best commercial real estate advisors in Ahmedabad.',
+    text: 'Their transparent advisory and deep market knowledge made my commercial property decision easy and confident. Best commercial real estate advisors in Ahmedabad.',
   },
 ]
 
