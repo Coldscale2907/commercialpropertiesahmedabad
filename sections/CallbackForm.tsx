@@ -5,9 +5,10 @@ import LeadForm from '@/components/LeadForm'
 interface CallbackFormProps {
   waNumber: string
   phone: string
+  accessKey?: string
 }
 
-export default function CallbackForm({ waNumber, phone }: CallbackFormProps) {
+export default function CallbackForm({ waNumber, phone, accessKey }: CallbackFormProps) {
   return (
     <section id="contact" className="bg-charcoal py-20 px-4 md:px-8 lg:px-16">
       <div className="max-w-7xl mx-auto lg:grid lg:grid-cols-2 gap-16 items-center">
@@ -45,7 +46,7 @@ export default function CallbackForm({ waNumber, phone }: CallbackFormProps) {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-8 lg:mt-0"
         >
-          <LeadForm waNumber={waNumber} phone={phone} source="callback_form" showConnectFooter />
+          <LeadForm waNumber={waNumber} phone={phone} source="callback_form" showConnectFooter accessKey={accessKey} />
         </motion.div>
       </div>
     </section>

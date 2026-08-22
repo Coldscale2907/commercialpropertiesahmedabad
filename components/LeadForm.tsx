@@ -34,14 +34,17 @@ type FormData = z.infer<typeof schema>
 
 const WA_MESSAGE = "Hi, I'm interested in commercial properties in Ahmedabad. Please share pricing and details."
 
+const DEFAULT_ACCESS_KEY = '032af630-8802-48d4-9ee6-476a774f5304'
+
 interface LeadFormProps {
   waNumber: string
   phone: string
   source?: string
   showConnectFooter?: boolean
+  accessKey?: string
 }
 
-export default function LeadForm({ waNumber, phone, source = 'callback_form', showConnectFooter = false }: LeadFormProps) {
+export default function LeadForm({ waNumber, phone, source = 'callback_form', showConnectFooter = false, accessKey = DEFAULT_ACCESS_KEY }: LeadFormProps) {
   const [submitted, setSubmitted] = useState(false)
   const {
     register,
@@ -52,7 +55,7 @@ export default function LeadForm({ waNumber, phone, source = 'callback_form', sh
   const onSubmit = async (data: FormData) => {
     try {
       const payload = {
-        access_key: '032af630-8802-48d4-9ee6-476a774f5304',
+        access_key: accessKey,
         subject: `New Lead: ${data.name} — Commercial Property Ahmedabad`,
         from_name: 'Commercial Properties Ahmedabad',
         to: 'info@slabsandbeams.com,contact@coldscale.in',
