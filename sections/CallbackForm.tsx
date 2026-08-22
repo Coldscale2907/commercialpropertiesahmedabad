@@ -6,9 +6,10 @@ interface CallbackFormProps {
   waNumber: string
   phone: string
   accessKey?: string
+  fixedProject?: string
 }
 
-export default function CallbackForm({ waNumber, phone, accessKey }: CallbackFormProps) {
+export default function CallbackForm({ waNumber, phone, accessKey, fixedProject }: CallbackFormProps) {
   return (
     <section id="contact" className="bg-charcoal py-20 px-4 md:px-8 lg:px-16">
       <div className="max-w-7xl mx-auto lg:grid lg:grid-cols-2 gap-16 items-center">
@@ -46,7 +47,7 @@ export default function CallbackForm({ waNumber, phone, accessKey }: CallbackFor
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-8 lg:mt-0"
         >
-          <LeadForm waNumber={waNumber} phone={phone} source="callback_form" showConnectFooter accessKey={accessKey} />
+          <LeadForm waNumber={waNumber} phone={phone} source="callback_form" showConnectFooter accessKey={accessKey} fixedProject={fixedProject} />
         </motion.div>
       </div>
     </section>

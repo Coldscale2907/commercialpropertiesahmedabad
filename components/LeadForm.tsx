@@ -27,7 +27,7 @@ const projectOptions = [
 const schema = z.object({
   name: z.string().min(2, 'Please enter your name'),
   phone: z.string().regex(/^[6-9]\d{9}$/, 'Enter a valid 10-digit Indian mobile number'),
-  interest: z.array(z.string()).min(1, 'Please select at least one project'),
+  interest: z.array(z.string()).optional(),
 })
 
 type FormData = z.infer<typeof schema>
@@ -42,17 +42,24 @@ interface LeadFormProps {
   source?: string
   showConnectFooter?: boolean
   accessKey?: string
+  fixedProject?: string
 }
 
-export default function LeadForm({ waNumber, phone, source = 'callback_form', showConnectFooter = false, accessKey = DEFAULT_ACCESS_KEY }: LeadFormProps) {
+export default function LeadForm({ waNumber, phone, source = 'callback_form', showConnectFooter = false, accessKey = DEFAULT_ACCESS_KEY, fixedProject }: LeadFormProps) {
   const [submitted, setSubmitted] = useState(false)
   const {
     register,
     handleSubmit,
+    setError,
     formState: { errors, isSubmitting },
   } = useForm<FormData>({ resolver: zodResolver(schema) })
 
   const onSubmit = async (data: FormData) => {
+    const interest = fixedProject ? [fixedProject] : (data.interest ?? [])
+    if (!fixedProject && interest.length === 0) {
+      setError('interest', { type: 'manual', message: 'Please select at least one project' })
+      return
+    }
     try {
       const payload = {
         access_key: accessKey,
@@ -61,7 +68,7 @@ export default function LeadForm({ waNumber, phone, source = 'callback_form', sh
         to: 'info@slabsandbeams.com,contact@coldscale.in',
         name: data.name,
         phone: data.phone,
-        interest: data.interest.join(', '),
+        interest: interest.join(', '),
         botcheck: '',
       }
 
@@ -126,25 +133,31 @@ export default function LeadForm({ waNumber, phone, source = 'callback_form', sh
             {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone.message}</p>}
           </div>
 
-          <div>
-            <label className="block text-sm font-semibold text-dark-text mb-2">
-              Project Interest <span className="text-red-500">*</span>
-            </label>
-            <div className="border border-border-gray rounded-lg px-4 py-3 grid grid-cols-1 gap-2 max-h-52 overflow-y-auto">
-              {projectOptions.map((project) => (
-                <label key={project} className="flex items-center gap-2 text-sm text-gray-700 cursor-pointer hover:text-gold transition-colors">
-                  <input
-                    type="checkbox"
-                    value={project}
-                    {...register('interest')}
-                    className="accent-gold w-4 h-4 rounded"
-                  />
-                  {project}
-                </label>
-              ))}
+          {fixedProject ? (
+            <div className="bg-soft-white border border-border-gray rounded-lg px-4 py-3 text-sm text-gray-600">
+              <span className="font-semibold text-dark-text">Interested in:</span> {fixedProject}
             </div>
-            {errors.interest && <p className="text-red-500 text-xs mt-1">{errors.interest.message}</p>}
-          </div>
+          ) : (
+            <div>
+              <label className="block text-sm font-semibold text-dark-text mb-2">
+                Project Interest <span className="text-red-500">*</span>
+              </label>
+              <div className="border border-border-gray rounded-lg px-4 py-3 grid grid-cols-1 gap-2 max-h-52 overflow-y-auto">
+                {projectOptions.map((project) => (
+                  <label key={project} className="flex items-center gap-2 text-sm text-gray-700 cursor-pointer hover:text-gold transition-colors">
+                    <input
+                      type="checkbox"
+                      value={project}
+                      {...register('interest')}
+                      className="accent-gold w-4 h-4 rounded"
+                    />
+                    {project}
+                  </label>
+                ))}
+              </div>
+              {errors.interest && <p className="text-red-500 text-xs mt-1">{errors.interest.message}</p>}
+            </div>
+          )}
 
           <button
             type="submit"

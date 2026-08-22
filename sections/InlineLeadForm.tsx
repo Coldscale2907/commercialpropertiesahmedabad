@@ -6,9 +6,10 @@ interface InlineLeadFormProps {
   waNumber: string
   phone: string
   accessKey?: string
+  fixedProject?: string
 }
 
-export default function InlineLeadForm({ waNumber, phone, accessKey }: InlineLeadFormProps) {
+export default function InlineLeadForm({ waNumber, phone, accessKey, fixedProject }: InlineLeadFormProps) {
   return (
     <section className="bg-charcoal py-20 px-4 md:px-8 lg:px-16">
       <div className="max-w-7xl mx-auto lg:grid lg:grid-cols-2 gap-16 items-center">
@@ -46,7 +47,7 @@ export default function InlineLeadForm({ waNumber, phone, accessKey }: InlineLea
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-8 lg:mt-0"
         >
-          <LeadForm waNumber={waNumber} phone={phone} source="inline_lead_form" accessKey={accessKey} />
+          <LeadForm waNumber={waNumber} phone={phone} source="inline_lead_form" accessKey={accessKey} fixedProject={fixedProject} />
         </motion.div>
       </div>
     </section>

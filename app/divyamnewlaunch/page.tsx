@@ -21,6 +21,7 @@ import SocialProof from '@/sections/SocialProof'
 const waNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '919898989898'
 const phone = process.env.NEXT_PUBLIC_PHONE_NUMBER || '919898989898'
 const formAccessKey = '9db4cd6a-f79e-406d-b54e-42c90a065e0a'
+const fixedProject = 'Upcoming New Launch by Divyam Procon'
 
 export const metadata: Metadata = {
   title: 'Upcoming New Launch by Divyam Procon | Vaishnodevi, Ahmedabad',
@@ -76,7 +77,7 @@ export default function DivyamNewLaunchPage() {
       <main className="pb-16 md:pb-0">
         <DivyamHero waNumber={waNumber} phone={phone} />
         <DivyamHighlights waNumber={waNumber} />
-        <InlineLeadForm waNumber={waNumber} phone={phone} accessKey={formAccessKey} />
+        <InlineLeadForm waNumber={waNumber} phone={phone} accessKey={formAccessKey} fixedProject={fixedProject} />
         <DivyamAbout waNumber={waNumber} />
         <DivyamAmenities waNumber={waNumber} />
         <WhatsAppCTABanner
@@ -90,7 +91,7 @@ export default function DivyamNewLaunchPage() {
         <WhyChooseSection />
         <SocialProof />
         <DivyamFAQ waNumber={waNumber} />
-        <CallbackForm waNumber={waNumber} phone={phone} accessKey={formAccessKey} />
+        <CallbackForm waNumber={waNumber} phone={phone} accessKey={formAccessKey} fixedProject={fixedProject} />
       </main>
       <Footer waNumber={waNumber} phone={phone} />
       <FloatingWhatsApp waNumber={waNumber} />
