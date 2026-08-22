@@ -4,8 +4,8 @@ export const divyamFaqs = [
     a: 'It is located at Vaishnodevi Circle, at the intersection of SG Highway and SP Ring Road, Ahmedabad — offering excellent connectivity to Ahmedabad, Gandhinagar and major commercial hubs.',
   },
   {
-    q: 'What is the starting price and unit size?',
-    a: 'Units start at ₹80 Lac onwards, with sizes beginning at 1,110 sq.ft. Premium office spaces and showrooms are available across the tower.',
+    q: 'What is the unit size available?',
+    a: 'Sizes start at 1,110 sq.ft onwards, with premium office spaces and showrooms available across the tower. Contact our advisory team for the latest pricing.',
   },
   {
     q: 'When is possession expected?',

@@ -69,16 +69,13 @@ export default function DivyamHero({ waNumber, phone }: DivyamHeroProps) {
           Premium offices &amp; showrooms with contemporary architecture, luxury corporate infrastructure and a prestigious business address, at the intersection of SG Highway &amp; SP Ring Road.
         </motion.p>
 
-        {/* Price + Possession Chips */}
+        {/* Info Chips */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.55, duration: 0.6 }}
           className="mt-8 flex flex-wrap items-center justify-center gap-3"
         >
-          <span className="bg-white/10 border border-white/20 text-white px-5 py-2.5 rounded-full text-sm md:text-base font-semibold">
-            ₹80 Lac Onwards
-          </span>
           <span className="bg-white/10 border border-white/20 text-white px-5 py-2.5 rounded-full text-sm md:text-base font-semibold">
             1,110 sq.ft Onwards
           </span>

@@ -19,7 +19,6 @@ const highlights = [
 ]
 
 const specs = [
-  { label: 'Price', value: '₹80 Lac Onwards' },
   { label: 'Size', value: '1,110 sq.ft Onwards' },
   { label: 'Category', value: 'Showroom & Office' },
   { label: 'Possession', value: 'Dec 2029' },
@@ -79,7 +78,7 @@ export default function DivyamAbout({ waNumber }: DivyamAboutProps) {
           className="mt-12 lg:mt-0"
         >
           <div className="bg-soft-white border border-border-gray rounded-2xl p-6 md:p-8 shadow-lg">
-            <h3 className="font-playfair font-semibold text-dark-text text-xl mb-5">Price &amp; Specifications</h3>
+            <h3 className="font-playfair font-semibold text-dark-text text-xl mb-5">Project Specifications</h3>
             <div className="divide-y divide-border-gray">
               {specs.map((s) => (
                 <div key={s.label} className="flex items-center justify-between py-3">

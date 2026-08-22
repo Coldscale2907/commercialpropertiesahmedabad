@@ -24,7 +24,7 @@ const phone = process.env.NEXT_PUBLIC_PHONE_NUMBER || '919898989898'
 export const metadata: Metadata = {
   title: 'Upcoming New Launch by Divyam Procon | Vaishnodevi, Ahmedabad',
   description:
-    'Upcoming New Launch by Divyam Procon at Vaishnodevi Circle, Ahmedabad. Iconic G+32 commercial tower with premium offices & showrooms, ₹80 Lac onwards. Expert advisory by Slabs and Beams Realty.',
+    'Upcoming New Launch by Divyam Procon at Vaishnodevi Circle, Ahmedabad. Iconic G+32 commercial tower with premium offices & showrooms. Expert advisory by Slabs and Beams Realty.',
   alternates: {
     canonical: 'https://commercialpropertiesahmedabad.in/divyamnewlaunch/',
   },
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     siteName: 'Commercial Properties Ahmedabad',
     title: 'Upcoming New Launch by Divyam Procon | Vaishnodevi, Ahmedabad',
     description:
-      'Iconic G+32 commercial tower at Vaishnodevi Circle, Ahmedabad. Premium offices & showrooms, ₹80 Lac onwards. Expert advisory by Slabs and Beams Realty.',
+      'Iconic G+32 commercial tower at Vaishnodevi Circle, Ahmedabad. Premium offices & showrooms. Expert advisory by Slabs and Beams Realty.',
     images: [
       {
         url: 'https://commercialpropertiesahmedabad.in/properties/Divyam.jpg',
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Upcoming New Launch by Divyam Procon | Vaishnodevi, Ahmedabad',
     description:
-      'Iconic G+32 commercial tower at Vaishnodevi Circle, Ahmedabad. Premium offices & showrooms, ₹80 Lac onwards.',
+      'Iconic G+32 commercial tower at Vaishnodevi Circle, Ahmedabad. Premium offices & showrooms.',
     images: ['https://commercialpropertiesahmedabad.in/properties/Divyam.jpg'],
   },
 }
