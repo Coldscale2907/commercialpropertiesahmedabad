@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { MapPin, MessageCircle, Phone, FileText } from 'lucide-react'
+import { MapPin, MessageCircle, Phone, FileText, ArrowRight } from 'lucide-react'
 import { properties } from '@/data/properties'
 import { Property } from '@/types'
 import { getWhatsAppURL, trackWhatsApp, trackCall } from '@/lib/utils'
@@ -147,6 +147,14 @@ export default function PropertiesSection({ waNumber, phone }: PropertiesSection
                   >
                     <FileText size={14} /> Inquire Now
                   </a>
+                  {property.id === 'divyam-vaishnodevi' && (
+                    <a
+                      href="/divyamnewlaunch/"
+                      className="col-span-2 flex items-center justify-center gap-1 bg-gold text-white text-sm py-2 rounded-lg hover:bg-gold/90 transition-colors"
+                    >
+                      View Project Page <ArrowRight size={14} />
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.div>
