@@ -28,6 +28,7 @@ const schema = z.object({
   name: z.string().min(2, 'Please enter your name'),
   phone: z.string().regex(/^[6-9]\d{9}$/, 'Enter a valid 10-digit Indian mobile number'),
   interest: z.array(z.string()).optional(),
+  message: z.string().optional(),
 })
 
 type FormData = z.infer<typeof schema>
@@ -69,6 +70,7 @@ export default function LeadForm({ waNumber, phone, source = 'callback_form', sh
         name: data.name,
         phone: data.phone,
         interest: interest.join(', '),
+        message: data.message || '',
         botcheck: '',
       }
 
@@ -134,8 +136,16 @@ export default function LeadForm({ waNumber, phone, source = 'callback_form', sh
           </div>
 
           {fixedProject ? (
-            <div className="bg-soft-white border border-border-gray rounded-lg px-4 py-3 text-sm text-gray-600">
-              <span className="font-semibold text-dark-text">Interested in:</span> {fixedProject}
+            <div>
+              <label className="block text-sm font-semibold text-dark-text mb-1">
+                Message <span className="text-gray-400 font-normal">(Optional)</span>
+              </label>
+              <textarea
+                {...register('message')}
+                rows={3}
+                placeholder="Any specific requirements or questions?"
+                className="w-full border border-border-gray rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors resize-none"
+              />
             </div>
           ) : (
             <div>
