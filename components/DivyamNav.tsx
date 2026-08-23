@@ -1,5 +1,5 @@
 'use client'
-import { ArrowLeft, Phone, MessageCircle } from 'lucide-react'
+import { Phone, MessageCircle } from 'lucide-react'
 import { useScrolled } from '@/hooks/useScrolled'
 import { getWhatsAppURL, trackWhatsApp, trackCall } from '@/lib/utils'
 
@@ -16,14 +16,8 @@ export default function DivyamNav({ waNumber, phone }: DivyamNavProps) {
   return (
     <nav className={`sticky top-0 z-50 bg-charcoal border-b border-white/10 transition-shadow ${scrolled ? 'shadow-lg' : ''}`}>
       <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between h-16 md:h-18">
-        {/* Back to main site */}
-        <a href="/" className="flex items-center gap-2 text-white/75 hover:text-gold text-sm font-medium transition-colors">
-          <ArrowLeft size={16} />
-          <span className="hidden sm:inline">All Properties</span>
-        </a>
-
         {/* Logo */}
-        <div className="flex flex-col leading-tight items-center text-center">
+        <div className="flex flex-col leading-tight">
           <span className="font-playfair font-bold text-white text-sm md:text-lg tracking-tight">
             Upcoming New Launch
           </span>
