@@ -25,7 +25,7 @@ export default function CallbackForm({ waNumber, phone, accessKey, fixedProject 
             Get Instant Property Details
           </h2>
           <p className="text-gold text-base mb-6 font-semibold">
-            Our advisor calls you back shortly.
+            We will call you back shortly.
           </p>
           <div className="space-y-3 mb-8">
             {[
