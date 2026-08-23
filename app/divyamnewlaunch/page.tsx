@@ -15,8 +15,6 @@ import { divyamFaqs } from '@/data/divyamFaqs'
 import InlineLeadForm from '@/sections/InlineLeadForm'
 import CallbackForm from '@/sections/CallbackForm'
 import WhatsAppCTABanner from '@/sections/WhatsAppCTABanner'
-import WhyChooseSection from '@/sections/WhyChooseSection'
-import SocialProof from '@/sections/SocialProof'
 
 const waNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '919898989898'
 const phone = process.env.NEXT_PUBLIC_PHONE_NUMBER || '919898989898'
@@ -82,15 +80,13 @@ export default function DivyamNewLaunchPage() {
         <DivyamAmenities waNumber={waNumber} />
         <WhatsAppCTABanner
           heading="Get Live Price & Availability"
-          subtext="Talk to our advisors for the latest floor plans, pricing and payment plans."
+          subtext="Talk to us for the latest floor plans, pricing and payment plans."
           darkBg={true}
           waNumber={waNumber}
           phone={phone}
         />
-        <DivyamLocationSection waNumber={waNumber} />
-        <WhyChooseSection />
-        <SocialProof />
         <DivyamFAQ waNumber={waNumber} />
+        <DivyamLocationSection waNumber={waNumber} />
         <CallbackForm waNumber={waNumber} phone={phone} accessKey={formAccessKey} fixedProject={fixedProject} />
       </main>
       <Footer waNumber={waNumber} phone={phone} />

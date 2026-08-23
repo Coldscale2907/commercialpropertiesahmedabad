@@ -51,7 +51,7 @@ export default function DivyamFAQ({ waNumber }: DivyamFAQProps) {
         </div>
 
         <div className="text-center">
-          <p className="text-gray-600 mb-4">Still have questions? Our advisors are here to help.</p>
+          <p className="text-gray-600 mb-4">We are here to help. Chat with us.</p>
           <a
             href={getWhatsAppURL(waNumber, WA_MESSAGE)}
             target="_blank"
@@ -59,7 +59,7 @@ export default function DivyamFAQ({ waNumber }: DivyamFAQProps) {
             onClick={() => trackWhatsApp('divyam_faq')}
             className="inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-full font-semibold hover:bg-green-600 transition-colors"
           >
-            <MessageCircle size={18} /> Chat With an Advisor
+            <MessageCircle size={18} /> Chat With Us
           </a>
         </div>
       </div>

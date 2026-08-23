@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { MapPin, Navigation as NavigationIcon, ExternalLink, MessageCircle, Calendar } from 'lucide-react'
 import { getWhatsAppURL, trackWhatsApp } from '@/lib/utils'
 
-const MAP_QUERY = 'Divyam Commercial Tower, Vaishnodevi Circle, SG Highway, Ahmedabad'
+const MAP_COORDS = '23.1343364,72.5426310'
 const WA_DIRECTIONS = "Hi, please share the exact location and directions for the Upcoming New Launch by Divyam Procon at Vaishnodevi Circle."
 const WA_VISIT = "Hi, I'd like to schedule a site visit for the Upcoming New Launch by Divyam Procon at Vaishnodevi Circle."
 
@@ -44,7 +44,7 @@ export default function DivyamLocationSection({ waNumber }: DivyamLocationSectio
           </p>
           <div className="w-full h-72 rounded-xl overflow-hidden mb-3 border border-border-gray">
             <iframe
-              src={`https://www.google.com/maps?q=${encodeURIComponent(MAP_QUERY)}&output=embed`}
+              src={`https://www.google.com/maps?q=${MAP_COORDS}&z=16&output=embed`}
               className="w-full h-full border-0"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
@@ -52,7 +52,7 @@ export default function DivyamLocationSection({ waNumber }: DivyamLocationSectio
             />
           </div>
           <a
-            href={`https://maps.google.com/?q=${encodeURIComponent(MAP_QUERY)}`}
+            href={`https://maps.google.com/?q=${MAP_COORDS}`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 text-sm text-gold font-medium hover:underline"
