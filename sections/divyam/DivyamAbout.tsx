@@ -41,12 +41,12 @@ export default function DivyamAbout({ waNumber }: DivyamAboutProps) {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-gold text-xs font-semibold tracking-widest uppercase">ABOUT THE PROJECT</span>
+          <span className="text-gold text-xs font-semibold tracking-widest uppercase">ABOUT THE COMMERCIAL PROPERTY</span>
           <h2 className="font-playfair font-bold text-dark-text text-3xl md:text-4xl mt-2 mb-4">
             Divyam Commercial Tower, Vaishnodevi
           </h2>
           <p className="text-gray-600 text-base leading-relaxed mb-6">
-            Divyam Commercial Tower is an upcoming premium commercial development at Vaishnodevi Circle, Ahmedabad, strategically located with seamless connectivity to SG Highway and SP Ring Road. Designed as an iconic G+32 commercial tower, it offers premium office spaces and showrooms with contemporary architecture, luxury corporate infrastructure and a prestigious business address.
+            Divyam Commercial Tower is an upcoming premium commercial project in Ahmedabad at Vaishnodevi Circle. One of the Prime Commercial Property in Ahmedabad, strategically located with seamless connectivity to SG Highway and SP Ring Road. Designed as an Iconic G+32 Commercial Tower, offering premium commercial office space in Ahmedabad. A Prestigious and upcoming commercial project in Ahmedabad that showcases Showrooms with contemporary architecture, luxury corporate infrastructure.
           </p>
 
           <div className="space-y-3 mb-8">

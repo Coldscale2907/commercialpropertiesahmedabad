@@ -21,6 +21,14 @@ const phone = process.env.NEXT_PUBLIC_PHONE_NUMBER || '919898989898'
 const formAccessKey = '9db4cd6a-f79e-406d-b54e-42c90a065e0a'
 const fixedProject = 'Upcoming New Launch by Divyam Procon'
 
+const footerQuickLinks = [
+  { label: 'Home', href: '/' },
+  { label: 'All Properties', href: '/#properties' },
+  { label: 'Property Guide', href: '/#why-choose-ahmedabad' },
+  { label: 'About Us', href: '/#about' },
+  { label: 'Contact', href: '#contact' },
+]
+
 export const metadata: Metadata = {
   title: 'Divyam Procon Upcoming New Launch | Vaishnodevi, Ahmedabad',
   description:
@@ -89,7 +97,7 @@ export default function DivyamNewLaunchPage() {
         <DivyamLocationSection waNumber={waNumber} />
         <CallbackForm waNumber={waNumber} phone={phone} accessKey={formAccessKey} fixedProject={fixedProject} />
       </main>
-      <Footer waNumber={waNumber} phone={phone} />
+      <Footer waNumber={waNumber} phone={phone} quickLinks={footerQuickLinks} />
       <FloatingWhatsApp waNumber={waNumber} />
       <MobileStickyBar waNumber={waNumber} phone={phone} />
       <ExitIntentPopup waNumber={waNumber} phone={phone} />

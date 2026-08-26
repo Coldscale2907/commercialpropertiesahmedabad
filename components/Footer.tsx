@@ -3,12 +3,21 @@ import { getWhatsAppURL } from '@/lib/utils'
 
 const WA_MESSAGE = "Hi, I'm interested in commercial properties in Ahmedabad. Please share pricing and details."
 
+const defaultQuickLinks = [
+  { label: 'Home', href: '#' },
+  { label: 'All Properties', href: '#properties' },
+  { label: 'Property Guide', href: '#why-choose-ahmedabad' },
+  { label: 'About Us', href: '#about' },
+  { label: 'Contact', href: '#contact' },
+]
+
 interface FooterProps {
   waNumber: string
   phone: string
+  quickLinks?: { label: string; href: string }[]
 }
 
-export default function Footer({ waNumber, phone }: FooterProps) {
+export default function Footer({ waNumber, phone, quickLinks = defaultQuickLinks }: FooterProps) {
   return (
     <footer className="bg-charcoal text-white">
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-16">
@@ -37,13 +46,7 @@ export default function Footer({ waNumber, phone }: FooterProps) {
           <div>
             <h4 className="font-playfair font-semibold text-white mb-4 text-base">Quick Links</h4>
             <ul className="space-y-2">
-              {[
-                { label: 'Home', href: '#' },
-                { label: 'All Properties', href: '#properties' },
-                { label: 'Property Guide', href: '#why-choose-ahmedabad' },
-                { label: 'About Us', href: '#about' },
-                { label: 'Contact', href: '#contact' },
-              ].map((link) => (
+              {quickLinks.map((link) => (
                 <li key={link.label}>
                   <a href={link.href} className="text-gray-400 hover:text-gold text-sm transition-colors">
                     {link.label}

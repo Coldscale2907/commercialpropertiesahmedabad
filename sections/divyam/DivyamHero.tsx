@@ -41,7 +41,7 @@ export default function DivyamHero({ waNumber, phone }: DivyamHeroProps) {
           transition={{ delay: 0.2, duration: 0.7 }}
           className="font-playfair font-bold text-white text-4xl md:text-6xl leading-tight mb-4"
         >
-          Upcoming New Launch by Divyam Procon
+          Upcoming Prime Commercial Project in Ahmedabad : New Launch by Divyam Procon
         </motion.h1>
 
         <motion.div

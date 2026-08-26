@@ -16,7 +16,7 @@ export const divyamFaqs = [
     a: 'The booking amount is 10% of the unit value. Detailed payment terms are available on request from our advisory team.',
   },
   {
-    q: 'What makes this tower unique?',
+    q: 'What is unique about this upcoming commercial project in Ahmedabad?',
     a: 'It is designed as an iconic G+32 commercial tower (approx. 123 meters), by renowned architect Mansi Shah, with 15 high-speed elevators, 1,400+ parking spaces and 100% Vastu-compliant office planning.',
   },
 ]

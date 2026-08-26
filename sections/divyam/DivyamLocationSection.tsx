@@ -40,7 +40,7 @@ export default function DivyamLocationSection({ waNumber }: DivyamLocationSectio
             <span>Vaishnodevi Circle, SG Highway, Ahmedabad</span>
           </div>
           <p className="text-gray-600 text-base leading-relaxed mb-5">
-            Strategically located at the intersection of SG Highway and SP Ring Road, offering excellent connectivity to Ahmedabad, Gandhinagar and major commercial hubs.
+            An upcoming commercial project in Ahmedabad, strategically located at the intersection of SG Highway and SP Ring Road, offering excellent connectivity to Ahmedabad, Gandhinagar and major commercial hubs.
           </p>
           <div className="w-full h-72 rounded-xl overflow-hidden mb-3 border border-border-gray">
             <iframe
