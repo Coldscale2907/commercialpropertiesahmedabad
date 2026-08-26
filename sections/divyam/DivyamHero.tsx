@@ -16,7 +16,7 @@ export default function DivyamHero({ waNumber, phone }: DivyamHeroProps) {
   return (
     <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
       <Image
-        src="/properties/Divyam.jpg"
+        src="/properties/divyam-hero-bg.png"
         alt="Upcoming New Launch by Divyam Procon - Vaishnodevi Circle, Ahmedabad"
         fill
         priority
